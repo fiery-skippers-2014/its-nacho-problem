@@ -8,7 +8,11 @@ We are Team "It's Nacho Problem!"
 
 Wireframe:
 ---------
-
+<img src="http://i.imgur.com/t3bXwcE.png"><br>
+<img src="http://i.imgur.com/Spu55IK.png"><br>
+<img src="http://i.imgur.com/LZKwyoo.png"><br>
+<img src="http://i.imgur.com/ACwAZcu.png"><br>
+<img src="http://i.imgur.com/vxgUSxA.png">
 
 
 
