@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: its_nacho_problem_development
+  pool: 5
+  username: 
+  password:
+
+test:
+  adapter: postgresql
+  host: localhost
+  database: its_nacho_problem_test
+  pool: 5
+  username: 
+  password:
+
+production:
+  adapter: postgresql
+  host: localhost
+  database: its_nacho_problem_production
+  pool: 5
+  username: 
+  password:
