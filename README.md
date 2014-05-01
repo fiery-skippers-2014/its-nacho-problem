@@ -1,9 +1,9 @@
 We are Team "It's Nacho Problem!"
 -----------------------------
-- Nina Hwang
-- Paolo Payumo
-- Britt McGinnis
-- Erin Snyder
+- <a href="https://github.com/nihwang">Nina Hwang</a>
+- <a href="https://github.com/paopay">Paolo Payumo</a>
+- <a href="https://github.com/konamax123">Britt McGinnis</a>
+- <a href="https://github.com/ErinJoan">Erin Snyder</a>
 
 
 Wireframe:
