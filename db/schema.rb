@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(:version => 20140501234553) do
     t.string "img_url"
     t.string "recipe_url"
     t.text   "components"
-    t.string "yummly_id"
   end
 
   create_table "users", :force => true do |t|
