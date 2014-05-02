@@ -1110,3 +1110,1330 @@ Completed 302 Found in 193ms (ActiveRecord: 2.6ms)
   [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
   [1m[35m (2.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
   [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+PG::UndefinedTable: ERROR:  relation "recipes" does not exist
+LINE 5:              WHERE a.attrelid = '"recipes"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"recipes"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.8ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (5.8ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+PG::UndefinedTable: ERROR:  relation "recipes" does not exist
+LINE 5:              WHERE a.attrelid = '"recipes"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"recipes"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (3.0ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+PG::UndefinedTable: ERROR:  relation "recipes" does not exist
+LINE 5:              WHERE a.attrelid = '"recipes"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"recipes"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.7ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+PG::UndefinedTable: ERROR:  relation "recipes" does not exist
+LINE 5:              WHERE a.attrelid = '"recipes"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"recipes"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (3.3ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+PG::UndefinedTable: ERROR:  relation "recipes" does not exist
+LINE 5:              WHERE a.attrelid = '"recipes"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"recipes"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.8ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:17:40 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (566.8ms)
+  Rendered users/index.html.erb within layouts/application (571.8ms)
+Completed 200 OK in 584ms (Views: 583.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 17:17:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.6ms)
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 4.1ms | ActiveRecord: 7.1ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 17:17:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ErinIsGreat", "email"=>"erin@dbc.com"}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'erin@dbc.com' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "erin@dbc.com"], ["password_digest", "$2a$10$1/dg6pKcgLBlX7AaWtSljemUQe2QSkD1vCrfyP8QEL7dDRyvmSEL6"], ["username", "ErinIsGreat"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 104ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:17:40 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (1.5ms)
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (3.2ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Mrs. Jessie Casper", "email"=>"hulda_little@spinka.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'hulda_little@spinka.org' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "hulda_little@spinka.org"], ["password_digest", "$2a$10$xCXgb0DiIbc82BexUj9uveMMBR/nl8iSjsi6.HdJO9fng7FopqPpK"], ["username", "Mrs. Jessie Casper"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 195ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.8ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Miss Gabrielle Rogahn", "email"=>"betsy@ankundingblanda.info", "password"=>"[FILTERED]"}}
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (4.1ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36mRecipe Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.3ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (7.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.2ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (70.7ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:18:25 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.5ms)
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 17:18:25 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.7ms)
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 4.3ms | ActiveRecord: 3.8ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 17:18:25 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ErinIsGreat", "email"=>"erin@dbc.com"}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'erin@dbc.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "erin@dbc.com"], ["password_digest", "$2a$10$RplAS9xN10AFJPwnPD9qF.9u9qfUomz/ON6KUU8HN1woJdef86yxO"], ["username", "ErinIsGreat"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 100ms (ActiveRecord: 2.7ms)
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:18:25 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (1.5ms)
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Bettie Corwin", "email"=>"anjali_krajcik@hahn.biz", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'anjali_krajcik@hahn.biz' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "anjali_krajcik@hahn.biz"], ["password_digest", "$2a$10$G6C4QwrY2hdHTiZ5VuvM9uOwtG0RKCpy2bQ3CoCmbWL/R.MA.jsRK"], ["username", "Bettie Corwin"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 193ms (ActiveRecord: 2.7ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.3ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Vivien Lynch", "email"=>"edmund_gusikowski@wildermanstamm.net", "password"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:57:19 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (548.4ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (555.2ms)
+Completed 200 OK in 568ms (Views: 567.7ms | ActiveRecord: 0.0ms)
+Started POST "/ingredients" for 127.0.0.1 at 2014-05-01 18:57:20 -0700
+Processing by IngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  Rendered ingredients/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.1ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (8.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Miss Veronica Reichel", "email"=>"keyshawn@koch.biz", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (22.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Twila Breitenberg", "email"=>"chadd@keebler.net", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chadd@keebler.net' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "chadd@keebler.net"], ["password_digest", "$2a$10$tvADd8NE2Op1RNO2rYB5wu3yNt54LCilB7DZJNef5dKeOXTOKxLN2"], ["username", "Twila Breitenberg"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 216ms (ActiveRecord: 3.9ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.2ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (1.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (18.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.2ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.4ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:58:50 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (545.2ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (552.3ms)
+Completed 200 OK in 564ms (Views: 563.9ms | ActiveRecord: 0.0ms)
+Started POST "/ingredients" for 127.0.0.1 at 2014-05-01 18:58:50 -0700
+Processing by IngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  Rendered ingredients/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.8ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (8.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Edwin Daniel", "email"=>"uriel_howell@monahanbarton.biz", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (2.8ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Mozell Jenkins", "email"=>"demetrius@lind.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'demetrius@lind.org' LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "demetrius@lind.org"], ["password_digest", "$2a$10$sErbmQz9yd9Ehsx8Rz.zJOoJZ/MkJp3lNrkjUYPmiiiLcfLiIq.Nu"], ["username", "Mozell Jenkins"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 216ms (ActiveRecord: 4.1ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.4ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.0ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Erick Ortiz", "email"=>"baylee.yundt@weberswift.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'baylee.yundt@weberswift.org' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "baylee.yundt@weberswift.org"], ["password_digest", "$2a$10$owKpHSqE/e.yLPkNJP9iB.KExRpMAgu3IAm6s.molpEBreBH6ZzYi"], ["username", "Erick Ortiz"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 219ms (ActiveRecord: 4.5ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.5ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (6.1ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Ms. Henriette Schmidt", "email"=>"aric@jacobsullrich.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 8ms
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (1.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.3ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:59:44 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (3.0ms)
+  Rendered sessions/_login.html.erb (1.4ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 18:59:44 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 15ms
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Lilly Koch", "email"=>"rhea@beier.org", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'its_nacho_problem_test'[0m
+  [1m[35m (8.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Tristin Zemlak DDS", "email"=>"hester@lebsack.org", "password"=>"[FILTERED]"}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'hester@lebsack.org' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "hester@lebsack.org"], ["password_digest", "$2a$10$iuTgWVfx1mecMwi7yC2jW.BBr8KqDsd3Bh45ODEEwH/JTtEAqe.Ym"], ["username", "Tristin Zemlak DDS"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://test.host/
+Completed 302 Found in 215ms (ActiveRecord: 4.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.1ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.2ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.9ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.2ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.5ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.3ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:00:20 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.6ms)
+Completed 500 Internal Server Error in 10ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Freda Aufderhar", "email"=>"benny.oconner@donnelly.net", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'benny.oconner@donnelly.net' LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "benny.oconner@donnelly.net"], ["password_digest", "$2a$10$TQ8d2UvYr4C5QR1e5js7pu2oy0iBagwqzhupK6oCnsKyEJptoxBOe"], ["username", "Freda Aufderhar"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 220ms (ActiveRecord: 4.1ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.5ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (5.8ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Haleigh Farrell", "email"=>"jeffery@murray.biz", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 8ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.2ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:01:48 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.6ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:01:48 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.2ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (2.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (1.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.4ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Brenda Murphy", "email"=>"joan@krajcik.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'joan@krajcik.com' LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "joan@krajcik.com"], ["password_digest", "$2a$10$n5kEOcJLw2i1P7On4tx83ustjpK.lNKkvVprBoRaZFDUnMMpr1hsa"], ["username", "Brenda Murphy"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/
+Completed 302 Found in 215ms (ActiveRecord: 4.3ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.5ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (5.8ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Lula Monahan", "email"=>"jimmie@kutch.net", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.5ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.3ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.1ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (2.5ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (1.1ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.5ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:03:07 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.8ms)
+  Rendered sessions/_login.html.erb (1.2ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:03:07 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (7.5ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:04:25 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (553.6ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (560.4ms)
+Completed 200 OK in 573ms (Views: 572.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:04:25 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 42ms
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'its_nacho_problem_test'[0m
+  [1m[35m (6.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Tyreek Hammes", "email"=>"marcelino@kreiger.info", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'marcelino@kreiger.info' LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "marcelino@kreiger.info"], ["password_digest", "$2a$10$iJBt8kDDnrOteYJpAwqyMOlmBwN9MI5T8QJ1i08mBdWVLF8tqBFxW"], ["username", "Tyreek Hammes"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://test.host/
+Completed 302 Found in 199ms (ActiveRecord: 3.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.8ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Christiana Lesch", "email"=>"davon_prosacco@walkerskiles.name", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (1.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:05:45 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (567.2ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (574.4ms)
+Completed 200 OK in 585ms (Views: 585.0ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:05:46 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.6ms)
+  Rendered sessions/_login.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 4.7ms | ActiveRecord: 9.4ms)
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.4ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'its_nacho_problem_test'[0m
+  [1m[35m (8.3ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Lowell VonRueden", "email"=>"jakob@harber.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'jakob@harber.com' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "jakob@harber.com"], ["password_digest", "$2a$10$FEjnctXMtS5mSyWbe.ewNec48kqWwswNpvsTa8jsq3koIhK0eJetO"], ["username", "Lowell VonRueden"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://test.host/ingredients
+Completed 302 Found in 197ms (ActiveRecord: 3.7ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Miss Damaris Senger", "email"=>"weston_armstrong@gleichnerrodriguez.net", "password"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.5ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.8ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (1.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.2ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Kelton Homenick", "email"=>"ursula_okon@labadie.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ursula_okon@labadie.org' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "ursula_okon@labadie.org"], ["password_digest", "$2a$10$iyQcQyTQ5yJ8KlNMe9cPBuXw3b9SnPI7gfNnuTZGTLiC0M1D3EvyC"], ["username", "Kelton Homenick"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/ingredients
+Completed 302 Found in 217ms (ActiveRecord: 4.2ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.4ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Dr. Abdullah Weber", "email"=>"grady@sipes.info", "password"=>"[FILTERED]"}}
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.8ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.2ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.2ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (2.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (12.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:07:59 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.9ms)
+  Rendered sessions/_login.html.erb (1.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:07:59 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.9ms)
+  Rendered sessions/_login.html.erb (0.5ms)
+Completed 200 OK in 15ms (Views: 5.6ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (7.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Oma Keebler", "email"=>"holden@nitzsche.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'holden@nitzsche.com' LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "holden@nitzsche.com"], ["password_digest", "$2a$10$zqsdCi6QU14Ek13OrednVuUXZ3u9z.wHa.SgKmLM6xBfMF0X0c64."], ["username", "Oma Keebler"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/ingredients
+Completed 302 Found in 219ms (ActiveRecord: 4.9ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.9ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (6.6ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Graham Rath", "email"=>"flavie@schumm.biz", "password"=>"[FILTERED]"}}
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.8ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:08:59 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.8ms)
+  Rendered sessions/_login.html.erb (1.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:08:59 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/_signup.erb (1.6ms)
+  Rendered sessions/_login.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.5ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (2.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (1.0ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:09:29 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (552.7ms)
+  Rendered sessions/_login.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (560.1ms)
+Completed 200 OK in 572ms (Views: 571.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:09:30 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.6ms)
+  Rendered sessions/_login.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 4.6ms | ActiveRecord: 10.3ms)
+  [1m[35m (0.7ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.9ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'its_nacho_problem_test'[0m
+  [1m[35m (7.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.9ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.8ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (2.1ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Benton McCullough", "email"=>"alex@kuhlman.com", "password"=>"[FILTERED]"}}
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Sonny Flatley II", "email"=>"kimberly.lakin@witting.info", "password"=>"[FILTERED]"}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'kimberly.lakin@witting.info' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "kimberly.lakin@witting.info"], ["password_digest", "$2a$10$NGm3ikeraSiOESROtppNeeiog5exb.08pvmOX24/bWJNRj52qeU6u"], ["username", "Sonny Flatley II"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Redirected to http://test.host/ingredients
+Completed 302 Found in 196ms (ActiveRecord: 3.3ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36mRecipe Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.7ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (7.2ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (6.0ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (1.0ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.1ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (2.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.0ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Started GET "/" for 127.0.0.1 at 2014-05-01 19:10:58 -0700
+Processing by UsersController#index as HTML
+  Rendered users/_signup.erb (2.9ms)
+  Rendered sessions/_login.html.erb (1.3ms)
+  Rendered users/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-05-01 19:10:58 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign Up!"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/_signup.erb (1.7ms)
+  Rendered sessions/_login.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 5.2ms | ActiveRecord: 3.6ms)
+  [1m[35m (0.9ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (21.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (2.6ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Myra Koepp", "email"=>"valentin.keler@hageneswitting.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'valentin.keler@hageneswitting.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "valentin.keler@hageneswitting.com"], ["password_digest", "$2a$10$DhirXCkZ./8yMydwPP.Q4..gfsUrmXkX3ntHjttzNk2..93zrBLBS"], ["username", "Myra Koepp"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/ingredients
+Completed 302 Found in 195ms (ActiveRecord: 2.9ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Kaley Schneider", "email"=>"gardner_thompson@shields.biz", "password"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36mRecipe Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.7ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (7.8ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.1ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (7.9ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes" LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (8.0ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.3ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Dr. Nikko Bruen", "email"=>"shanel@spencer.biz", "password"=>"[FILTERED]"}}
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (5.0ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Dr. Elsa Schultz", "email"=>"dayna_botsford@pacochaframi.biz", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'dayna_botsford@pacochaframi.biz' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "dayna_botsford@pacochaframi.biz"], ["password_digest", "$2a$10$yqVVrvegEFARpP7J3TvRPebXoZwsUvzhov.KNO15XKE9tvrjYlQnC"], ["username", "Dr. Elsa Schultz"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+Redirected to http://test.host/ingredients
+Completed 302 Found in 207ms (ActiveRecord: 4.9ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.5ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36mRecipe Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.4ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.7ms)[0m  select table_name from information_schema.views where table_schema = 'its_nacho_problem_test'
+  [1m[36m (7.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.9ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", nil], ["recipe_url", "a"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (0.7ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35mRecipe Exists (0.5ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" = 'a' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.7ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.3ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36mRecipe Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."name" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.2ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.6ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes" LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "recipes" ("components", "img_url", "name", "recipe_url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["components", nil], ["img_url", nil], ["name", "a"], ["recipe_url", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Exists (1.0ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35mRecipe Exists (0.6ms)[0m  SELECT 1 AS one FROM "recipes" WHERE "recipes"."name" = 'a' LIMIT 1
+  [1m[36mRecipe Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "recipes" WHERE "recipes"."recipe_url" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.4ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Zander Osinski", "email"=>"london.boehm@dach.biz", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'london.boehm@dach.biz' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("email", "password_digest", "username") VALUES ($1, $2, $3) RETURNING "id"  [["email", "london.boehm@dach.biz"], ["password_digest", "$2a$10$S/6CGKD6HqnjQVl5LFoA2.aWL.mDcCY4O1vsi1FuKEwmn.s/Kc7Au"], ["username", "Zander Osinski"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://test.host/ingredients
+Completed 302 Found in 212ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.7ms)[0m  TRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Davion DuBuque", "email"=>"erin_mueller@christiansenhermann.biz", "password"=>"[FILTERED]"}}
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (4.8ms)[0m  [1mTRUNCATE TABLE "recipes", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL

@@ -11,20 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20140501225103) do
-
-  create_table "users", :force => true do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-  end
 
   create_table "recipes", :force => true do |t|
     t.string "name"
     t.string "img_url"
     t.string "recipe_url"
     t.text   "components"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
   end
 
 end
