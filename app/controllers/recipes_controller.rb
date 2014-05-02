@@ -1,31 +1,15 @@
 class RecipesController < ApplicationController
 
-  def yummly_search_result
-    result = Yummly.search('Bacon')
-    recipe_list = result.matches
+  def yummly_search_result(user_pantry)
+    result = Yummly.search(user_pantry)
+    result.matches
   end
 
-  def fetch_name(list)
-    recipe_names = list.map do |recipe|
-      recipe["recipeName"]
-    end 
-  end 
-
-  def fetch_id(list)
-    recipe_id = list.map do |recipe|
-      "http://www.yummly.com/recipe/#{recipe['id']}" 
-    end 
-  end
-
-  def fetch_url(list)
-    recipe_url = list.map do |recipe|
-      recipe["smallImageUrls"]
-    end
-  end
-
-  def fetch_components(list)
-    recipe_url = list.map do |recipe|
-      recipe["ingredients"]
+  def create
+    api_result = yummly_search_result('steak, pepper')
+    api_result.length.times do
+      Recipe.create(new_recipe_from_yummly(api_result))
+      api_result.pop
     end
   end
 
