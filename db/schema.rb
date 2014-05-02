@@ -21,4 +21,10 @@ ActiveRecord::Schema.define(:version => 20140501234553) do
     t.string "yummly_id"
   end
 
+  create_table "users", :force => true do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+  end
+
 end
