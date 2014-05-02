@@ -2,7 +2,6 @@
 # encoding: utf-8
 require 'spec_helper'
 
-require 'sample_yummly_json'
 
 
 describe RecipeController do 
