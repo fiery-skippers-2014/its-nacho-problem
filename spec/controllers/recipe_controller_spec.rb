@@ -2,7 +2,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-require 'sample_yummly_json'
+# require 'sample_yummly_json'
 
 
 describe RecipesController do 
@@ -11,7 +11,13 @@ describe RecipesController do
   context "name from json object" do 
     it "should have a recipe name" do
       controller.stub(:yummly_search_result){result}
-      expect(controller.fetch_name).to be_an Array  
+      expect(controller.fetch_name(result)).to include 'Escargot Classic Style'
+      expect(controller.fetch_name(result)).to be_an Array  
+    end
+
+    it "should have a recipe name" do
+      controller.stub(:yummly_search_result){result}
+      expect(controller.fetch_id(result)).to be_an Array  
     end
   end
 
