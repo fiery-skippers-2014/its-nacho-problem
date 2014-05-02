@@ -1,0 +1,13 @@
+<div>
+  <ul><%= form_for :user, url: users_path do |f| %>
+    <li><%= f.label :username %></li>
+    <li><%= f.text_field :username %></li>
+    <li><%= f.label :email %></li>
+    <li><%= f.email_field :email %></li>
+    <li><%= label_tag :password %></li>
+    <li><%= password_field_tag :password %></li>
+    <li><%= label_tag :password_confirmation %></li>
+    <li><%= password_field_tag :password_confirmation %></li>
+    <li><%= f.submit 'Sign Up!' %></li>
+  <% end %></ul>
+</div>
