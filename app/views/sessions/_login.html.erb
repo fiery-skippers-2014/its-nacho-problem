@@ -1,9 +1,9 @@
-<div class="log-in">
-  <ul><%= form_tag '/sessions' %>
-    <li><%= label_tag :email %></li>
-    <li><%= email_field_tag :email %></li>
-    <li><%= label_tag :password %></li>
-    <li><%= password_field_tag :password %></li>
-    <li><%= submit_tag "Log in" %></li>
-  </ul>
-</div>
+<h3>Log In:</h3>
+  <div class="log-in">
+    <%= form_tag '/sessions' %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %><br>
+      <%= submit_tag "Log in" %>
+  </div>

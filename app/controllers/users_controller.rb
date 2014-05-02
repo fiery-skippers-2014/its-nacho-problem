@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  def new
 
+  def new
+    render 'ingredients'
   end
 
   def create
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
       user.password = params[:password]
       if user.save
         session[:user_id] = user.id
-        redirect_to root_path
+        redirect_to ingredients_path
       else
         flash.alert = user.errors.full_messages.join(' : ')
         render 'index'
