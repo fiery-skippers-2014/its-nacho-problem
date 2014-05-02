@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140501223708) do
+ActiveRecord::Schema.define(:version => 20140501234553) do
 
   create_table "recipes", :force => true do |t|
     t.string "name"
     t.string "img_url"
     t.string "recipe_url"
     t.text   "components"
+    t.string "yummly_id"
   end
 
 end
