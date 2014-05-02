@@ -1,16 +1,17 @@
 class RecipesController < ApplicationController
 
-  def yummly_search_result(user_pantry)
-    result = Yummly.search(user_pantry)
+  def yummly_search_result(user_pantry, max_results)
+    result = Yummly.search(user_pantry, max_results)
     result.matches
   end
 
   def create
-    api_result = yummly_search_result('steak, pepper')
+    api_result = yummly_search_result('chicken', {maxResult: 500})
     api_result.length.times do
       Recipe.create(new_recipe_from_yummly(api_result))
       api_result.pop
     end
+    render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
   end
 
 end
