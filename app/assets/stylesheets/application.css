@@ -1,4 +1,4 @@
-/*
+t/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+.main-container{
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px dotted black;
+}
+
+.header{
+  margin: 15px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.header a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.sign-up{
+
+}
+
+.log-in{
+
+}
