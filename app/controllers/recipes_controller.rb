@@ -10,11 +10,11 @@ class RecipesController < ApplicationController
 
 
   def create
-    new_recipe = Recipe.create(name: @recipe_name, image_url: @recipe_url, recipe_url: "http://www.yummly.com/recipes/", )
+    new_recipe = Recipe.create(name: @recipe_name, img_url: @recipe_url, recipe_url: "Whatever_url", components: "some_components" )
   end
 
 
-  def yummly_search_result('Bacon')
+  def yummly_search_result
     result = Yummly.search('Bacon')
     recipe_list = result.matches
   end
@@ -38,3 +38,7 @@ class RecipesController < ApplicationController
   end
 
 end
+
+# 1.Take json object with method in the model
+# 2.Pass those results to a method that parses that data into what we need
+# 3.Create a new Recipe object based on that data.

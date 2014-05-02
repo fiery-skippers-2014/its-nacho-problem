@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
   serialize :components
-  attr_accessible :components, :name, :recipe_url
+  attr_accessible :components, :name, :recipe_url, :img_url
 
   validates_presence_of :name, :recipe_url, :components
   validates_uniqueness_of :name, :recipe_url
