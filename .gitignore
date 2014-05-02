@@ -1,4 +1,6 @@
-/log
+.bundle
+log/*
 *.log
 .DS_Store
 .env
+tmp/
