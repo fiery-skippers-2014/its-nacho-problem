@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'dotenv'
+gem 'yummly'
 
 gem 'pg'
 group :development, :test do
