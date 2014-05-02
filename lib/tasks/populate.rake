@@ -1,7 +1,7 @@
 namespace :db do
 	desc "Populate the ingredients database with USDA db"
  	task :ingredients => :environment do 
-		file = File.open("../vendor/usda_db.txt")
+		file = File.open("vendor/usda_db.txt")
 		ingredients = []
 		split_description = []
 		ingredients_description = []
