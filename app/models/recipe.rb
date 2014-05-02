@@ -5,3 +5,4 @@ class Recipe < ActiveRecord::Base
   validates_presence_of :name, :recipe_url, :components
   validates_uniqueness_of :name, :recipe_url
 end
+
