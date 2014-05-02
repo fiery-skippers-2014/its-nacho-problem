@@ -19,6 +19,10 @@ class RecipesController < ApplicationController
     end
   end
 
-  
+  def fetch_url(list)
+    recipe_url = list.map do |recipe|
+      recipe["smallImageUrls"]
+    end
+  end
 
 end

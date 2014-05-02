@@ -25,6 +25,14 @@ describe RecipesController do
     it "should have id Escargots-Bourguignonne-Recipezaar" do 
       expect(controller.fetch_id(result)).to include "Escargots-Bourguignonne-Recipezaar"
     end
+
+    it "should have an image url" do 
+      expect(controller.fetch_url(result)).to be_an Array 
+    end
+
+    it "should have url http://lh3.ggpht.com/prQrdKeMxjXTegGlJm42V6hg7y_uQzPFs8DEXvWUr7190drxtGYzcaeKEhPIBzYwf0-o_u_HRa6ZmUT3TOyKGg=s90" do 
+      expect(controller.fetch_url(result)).to include ["http://lh3.ggpht.com/prQrdKeMxjXTegGlJm42V6hg7y_uQzPFs8DEXvWUr7190drxtGYzcaeKEhPIBzYwf0-o_u_HRa6ZmUT3TOyKGg=s90"]
+    end
   end
 
 end
