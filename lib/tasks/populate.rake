@@ -16,7 +16,7 @@ namespace :db do
 		end
 
 		split_description.each do |ingredient|
-			ingredients << ingredient[0..1].join(' ')
+			ingredients << ingredient[0..1].reverse.join(' ')
 		end
 
 		unique_ingredients = ingredients.uniq
