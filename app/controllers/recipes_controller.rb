@@ -4,13 +4,19 @@ class RecipesController < ApplicationController
 
   def yummly_search_result
     result = Yummly.search('Bacon')
-    result.matches
+    recipe_list = result.matches
   end
 
-  def fetch_name
-    recipe_names = yummly_search_result.map do |recipe|
+  def fetch_name(list)
+    recipe_names = list.map do |recipe|
       recipe["recipeName"]
     end 
+  end
+
+  def fetch_id(list)
+    recipe_id = list.map do |recipe|
+      recipe["id"]
+    end
   end
 
 end
