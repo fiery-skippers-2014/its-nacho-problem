@@ -8,6 +8,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'dotenv'
 gem 'yummly'
+gem 'pg_search'
 
 gem 'pg'
 group :development, :test do
@@ -21,6 +22,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'rack_session_access'
 end
 
 

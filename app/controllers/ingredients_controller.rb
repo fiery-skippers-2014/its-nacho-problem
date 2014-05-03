@@ -1,8 +1,11 @@
 class IngredientsController < ApplicationController
 
   def index
-    @search = params[:search]
-    @ingredients = Ingredient.all(:conditions => ['name LIKE ?', "%#{@search}%"])
+    @user = current_user
+    if @search
+      @search = params[:search]
+      @ingredients = Ingredient.search(@search)
+    end
   end
 
   def new
