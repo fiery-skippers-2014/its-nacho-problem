@@ -1,8 +1,22 @@
-<h3>Your Pantry:</h3>
+<h3 class="user_pantry">Your Pantry:</h3>
+<hr>
 
 <!-- Search bar -->
+<div class="ingredient_search_div">
+  <h3>Add items to your pantry:</h3>
+  <%= render partial: 'ingredients/search' %>
+
+  <h4>Search results:</h4>
+  <%= render partial: 'ingredients/search_results' %>
+</div>
+
+
 
 <!-- List of ingredients in your pantry-->
+<div class="user_pantry_div">
+  <h3>Items in your pantry:</h3>
+</div>
 
-<%= link_to "Log out", logout_path %>
+<%= link_to "Get a Recipe", "#" %>
+
 
