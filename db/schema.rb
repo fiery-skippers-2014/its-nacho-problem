@@ -11,13 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20140503012358) do
 
   create_table "ingredients", :force => true do |t|
     t.string "name"
   end
-
 
   create_table "recipes", :force => true do |t|
     t.string "name"
