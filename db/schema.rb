@@ -13,15 +13,10 @@
 
 ActiveRecord::Schema.define(:version => 20140503012358) do
 
-
   create_table "ingredients", :force => true do |t|
     t.string "name"
   end
 
-  create_table "pantries", :force => true do |t|
-    t.string  "food_name"
-    t.integer "user_id"
-  end
 
   create_table "recipes", :force => true do |t|
     t.string "name"
