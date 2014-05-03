@@ -2,7 +2,7 @@ class IngredientsController < ApplicationController
 
   def index
     @search = params[:search]
-    @ingedients = Ingredient.search(@search)
+    @ingredients = Ingredient.search(@search)
   end
 
   def new
