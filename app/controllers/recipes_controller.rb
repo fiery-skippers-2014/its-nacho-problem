@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
 
+
   def yummly_search_result(user_pantry, max_results)
     result = Yummly.search(user_pantry, max_results)
     result.matches
@@ -15,3 +16,7 @@ class RecipesController < ApplicationController
   end
 
 end
+
+# 1.Take json object with method in the model
+# 2.Pass those results to a method that parses that data into what we need
+# 3.Create a new Recipe object based on that data.
