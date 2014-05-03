@@ -5,9 +5,9 @@ ItsNachoProblem::Application.routes.draw do
 
   resources :recipes, only: [:create]
 
-  resources :session, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
 
-  resources :user do
+  resources :users do
     resources :ingredients, only: [:index, :new, :create]
   end
 end
