@@ -31,9 +31,23 @@ t/*
 }
 
 .sign-up{
+  margin: 10px;
 
 }
 
 .log-in{
+  margin: 10px;
 
+}
+
+.search_bar{
+  margin: 10px 0;
+}
+
+.search_results{
+  margin: 10px 0;
+}
+
+.user_pantry{
+  text-align: center;
 }
