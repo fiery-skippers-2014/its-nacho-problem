@@ -11,22 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140502232134) do
+
+ActiveRecord::Schema.define(:version => 20140503012358) do
 
   create_table "ingredients", :force => true do |t|
     t.string "name"
   end
 
-  create_table "pantries", :force => true do |t|
-    t.string  "food_name"
-    t.integer "user_id"
-  end
 
   create_table "recipes", :force => true do |t|
     t.string "name"
-    t.text   "img_url"
     t.string "recipe_url"
     t.text   "components"
+    t.text   "img_url"
+  end
+
+  create_table "user_ingredients", :force => true do |t|
+    t.integer "user_id"
+    t.integer "ingredient_id"
   end
 
   create_table "users", :force => true do |t|
