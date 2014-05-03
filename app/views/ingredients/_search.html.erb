@@ -1,0 +1,6 @@
+<div class="search_bar">
+  <%= form_tag ingredients_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
