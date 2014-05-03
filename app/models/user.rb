@@ -15,11 +15,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  def find_recipe_by_pantry
+  def get_keyword
     get_name.inject({}) {|hash, element| hash[element[0..[4, element.size].min]] = element; hash}
   end
 
-
+  def find_recipe_by_pantry
+    pantry_hashed = get_keyword
+    Recipe.first.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
+  end
 end
 
 
