@@ -1,5 +1,5 @@
 <div class="search_bar">
-  <%= form_tag ingredients_path, :method => 'get' do %>
+  <%= form_tag user_ingredients_path(@user), :method => 'get' do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   <% end %>
