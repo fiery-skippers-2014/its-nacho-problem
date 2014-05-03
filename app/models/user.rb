@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   def get_name
     self.ingredients.map do |obj|
       obj.name 
-    end
+    end 
   end
 
   def get_keyword
@@ -21,7 +21,9 @@ class User < ActiveRecord::Base
 
   def find_recipe_by_pantry
     pantry_hashed = get_keyword
-    Recipe.first.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
+    Recipe.all.map do |recipe_obj|
+      recipe_obj.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
+    end
   end
 end
 
