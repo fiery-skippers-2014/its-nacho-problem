@@ -9,5 +9,20 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  # has_many :ingredients
+  def get_name
+    self.ingredients.map do |obj|
+      obj.name 
+    end
+  end
+
+  def find_recipe_by_pantry
+    get_name.inject({}) {|hash, element| hash[element[0..[4, element.size].min]] = element; hash}
+  end
+
+
 end
+
+
+
+
+
