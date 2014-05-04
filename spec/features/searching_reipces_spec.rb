@@ -16,9 +16,8 @@ feature 'searching for ingredient in serach bar' do
     expect(page).to have_content('Apple Pie')
   end  
 
-  scenario "a user will be shown missing ingredients for each recipe", js: true do
+  scenario "a user will be shown missing ingredients for each recipe" do
     click_on 'Nacho Problem'
-    debugger
     expect(page).to have_content('Missing Ingredients: ["pie"]')
   end
 end
