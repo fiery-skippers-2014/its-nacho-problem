@@ -11,7 +11,7 @@ feature 'user sign up' do
 
   scenario "able to sign up" do
     visit root_path
-    within 'div.sign-up' do
+    within 'div#sign-up' do
       fill_in 'Username',               :with => user_attr[:username]
       fill_in 'Email',                  :with => user_attr[:email]
       fill_in 'Password',               :with => user_attr[:password]

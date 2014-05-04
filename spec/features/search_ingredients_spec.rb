@@ -9,13 +9,13 @@ feature 'searching for ingredient in serach bar' do
     visit user_ingredients_path(user)
   end
 
-  scenario "a user can search for existing ingredients"
+  scenario "a user can search for existing ingredients" do 
     fill_in 'search', with: 'apple'
     click_on 'Search'
     expect(page).to have_content('apple')
   end
 
-  scenario "a user can search for existing ingredients"
+  scenario "a user can search for existing ingredients" do 
     fill_in 'search', with: 'poop'
     click_on 'Search'
     expect(page).not_to have_content('poop')
