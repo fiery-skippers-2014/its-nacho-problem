@@ -16,9 +16,26 @@ describe User do
   context "Comparing pantry with database" do 
     let(:user){FactoryGirl.create(:user)}
     let(:ingredient){FactoryGirl.create(:ingredient)}
-    let(:user_with_ingredients) {FactoryGirl.create(:user_with_ingredients, :user_id => user.id, :ingredient_id => ingredient.id)}
-    it "should return an array with get_name" do 
-      expect(user.get_name).to  be_an Array  
+    let(:recipe){FactoryGirl.create(:recipe)}
+
+    before(:each) do
+      user.ingredients << ingredient
+    end
+
+    it "should return an array with #get_name" do 
+      expect(user.get_name).to be_an Array 
+    end
+
+    it "should return an hash with #get_keyword " do 
+      expect(user.get_keyword).to be_a Hash
+    end
+
+    it "should return a hash with #find_recipe_by_pantry" do
+      expect(user.find_recipe_by_pantry).to be_a Hash
+    end
+    
+    it "should return a hash with #find_recipe_by_pantry" do
+      expect(user.find_recipe_by_pantry).to be_a Hash
     end
   end
 

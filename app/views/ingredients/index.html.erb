@@ -16,6 +16,8 @@
   <h3>Items in your pantry:</h3>
 </div>
 
-<%= link_to "Get a Recipe", "#" %>
+<%= form_for :recipes do |f|%>
+  <%= f.submit %>
+<% end %>
 
 
