@@ -22,6 +22,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'rack_session_access'
 end
 
 
@@ -53,4 +54,4 @@ gem 'awesome_print'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

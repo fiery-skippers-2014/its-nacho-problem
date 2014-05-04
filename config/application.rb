@@ -25,6 +25,8 @@ module ItsNachoProblem
 
     config.active_record.whitelist_attributes = true
 
+    config.active_record.schema_format = :sql
+
     config.assets.enabled = true
 
     config.assets.version = '1.0'

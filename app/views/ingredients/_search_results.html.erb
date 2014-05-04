@@ -1,8 +1,10 @@
 <div class="search_results">
   <ul>
-  <% @ingredients.each do |item| %>
-    <li><%= item.name %></li>
-  <% end %>
+    <% if @search %>
+      <% @ingredients.each do |item| %>
+        <li><%= item.name %></li>
+      <% end %>
+    <% end %>
   </ul>
 
 

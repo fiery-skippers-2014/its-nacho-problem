@@ -1,4 +1,5 @@
 <h3 class="user_pantry">Your Pantry:</h3>
+<h3>Welcome <%= current_user.username %></h3>
 <hr>
 
 <!-- Search bar -->
@@ -9,8 +10,6 @@
   <h4>Search results:</h4>
   <%= render partial: 'ingredients/search_results' %>
 </div>
-
-
 
 <!-- List of ingredients in your pantry-->
 <div class="user_pantry_div">
