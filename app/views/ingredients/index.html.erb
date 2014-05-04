@@ -19,8 +19,12 @@
   <h3>Items in your pantry:</h3>
 </div>
 
-<%= link_to "Get a Recipe", "#", :class => "button" %>
+<%= form_for @user, :url => user_nachoresult_path(@user), :method => :get do |f|%>
+  <%= f.submit 'Nacho Problem!'%>
+<% end %>
+
 </div>
 </div>
+
 
 

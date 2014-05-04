@@ -21,9 +21,16 @@ class User < ActiveRecord::Base
 
   def find_recipe_by_pantry
     pantry_hashed = get_keyword
+    found_recipes = {}
     Recipe.all.map do |recipe_obj|
-      recipe_obj.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
+      found_recipes[recipe_obj.name] = recipe_obj.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
     end
+    found_recipes
+  end
+
+  def sort_recipes_by_ingredients
+    top_recipes = find_recipe_by_pantry.sort_by { |recipe_name, missing_ingredients| missing_ingredients.length }
+      Hash[top_recipes.slice(0, 10)]
   end
 end
 

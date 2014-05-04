@@ -9,5 +9,6 @@ ItsNachoProblem::Application.routes.draw do
 
   resources :users do
     resources :ingredients, only: [:index, :new, :create]
+    get '/nachoresult' => 'recipes#show', as: 'nachoresult'
   end
 end
