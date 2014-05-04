@@ -1,9 +1,11 @@
-<div class="log-in">
-<h3>Log In:</h3>
+<div class="row log-in">
+  <div class="large-4 columns ">
+    <h3>Log In:</h3>
     <%= form_tag '/sessions' %>
-      <%= label_tag :email %>
-      <%= email_field_tag :email %><br>
-      <%= label_tag :password %>
-      <%= password_field_tag :password %><br>
-      <%= submit_tag "Log in" %>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %><br>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag "Log in" %>
   </div>
+</div>

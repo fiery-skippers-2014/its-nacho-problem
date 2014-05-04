@@ -1,4 +1,4 @@
-t/*
+/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -9,49 +9,5 @@ t/*
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation_and_overrides
  *= require_tree .
- */
-
- body {
-  color: red;
- }
-
-/*.main-container{
-  width: 80%;
-  margin: 10px auto;
-  padding: 20px;
-  border: 1px dotted black;
-}
-
-.header{
-  margin: 15px auto;
-  text-align: center;
-  width: 50%;
-}
-
-.header a {
-  padding: 5px;
-  text-decoration: none;
-}*/
-
-.sign-up{
-  margin: 10px;
-
-}
-
-.log-in{
-  margin: 10px;
-
-}
-
-.search_bar{
-  margin: 10px 0;
-}
-
-.search_results{
-  margin: 10px 0;
-}
-
-.user_pantry{
-  text-align: center;
-}
