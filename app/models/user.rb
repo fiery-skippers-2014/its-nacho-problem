@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :password_confirmation
+  attr_accessible :email, :username, :password, :password_confirmation, :ingredient_ids
 
   validates_presence_of :password, :email, :on => :create
   validates :email, :uniqueness => true

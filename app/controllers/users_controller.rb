@@ -21,4 +21,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = current_user
+    p "!!!"*30
+    p params[:ingredient_ids]
+    p "!!!"*30
+
+    params[:ingredient_ids].length.times do |index|
+      @user.ingredients << Ingredient.find(params["ingredient_ids"][index])
+    end
+    redirect_to user_ingredients_path(@user)
+  end
+
 end
