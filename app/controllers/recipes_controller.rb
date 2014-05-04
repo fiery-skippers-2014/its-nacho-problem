@@ -6,22 +6,24 @@ class RecipesController < ApplicationController
     result.matches
   end
 
+  def show
+    @top_recipes = current_user.sort_recipes_by_ingredients
+    @recipe_objects = []
+    @top_recipes.each_key {|recipe_name| recipe_objects << Recipe.find_by_name(recipe_name)}
+  end
+
   def create
-    @top_recipes = User.first.sort_recipes_by_ingredients
-
-    if @top_recipes == nil
-      api_result = yummly_search_result('bacon', {maxResult: 10})
-      api_result.length.times do
-        Recipe.create(new_recipe_from_yummly(api_result))
-        new_recipe_from_yummly(api_result)[:components].each do |ingredient|
-          Ingredient.create(name: ingredient)
-        end
-        api_result.pop
+    api_result = yummly_search_result('bacon', {maxResult: 10})
+    api_result.length.times do
+      Recipe.create(new_recipe_from_yummly(api_result))
+      new_recipe_from_yummly(api_result)[:components].each do |ingredient|
+        Ingredient.create(name: ingredient)
       end
-      @top_recipes = User.first.sort_recipes_by_ingredients
+      api_result.pop
     end
+    # @top_recipes = current_user.sort_recipes_by_ingredients
+    # redirect_to user_
 
-    
     render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
   end
 
