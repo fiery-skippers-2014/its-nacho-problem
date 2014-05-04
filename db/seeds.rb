@@ -6,13 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-britt = User.create(username: "Britt", email: "me@me.com", password: 123)
 paolo = User.create(username: "Paolo", email: "you@you.com", password: 123)
 
-100.times do 
-  britt.ingredients << Ingredient.find(rand(1...3000))
-end
+id = Ingredient.first.id
 
-100.times do 
-  paolo.ingredients << Ingredient.find(rand(1...3000))
+10.times do |n|
+  paolo.ingredients << Ingredient.find(id + n)
 end
