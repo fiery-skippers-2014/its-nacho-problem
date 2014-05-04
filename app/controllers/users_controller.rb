@@ -23,10 +23,15 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    params[:ingredient_ids].length.times do |index|
-      @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
-    end
+    if @user.save
+      flash[:notice] = "Your food has been saved!"
+      params[:ingredient_ids].length.times do |index|
+        @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
+      end
     redirect_to user_ingredients_path(@user)
+    else
+      redirect_to user_ingredients_path(@user), :flash => {:error => "blah"}
+    end
   end
 
 end
