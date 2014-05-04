@@ -3,7 +3,9 @@
   <li><%= image_tag recipe.img_url %></li>
   <li><%= recipe.name %></li>
   <li><%= recipe.components %></li>
+  <li>Missing Ingredients: <%= @top_recipes["#{recipe.name}"] %></li>
   <li><%= link_to "See Recipe", "#{recipe.recipe_url}" %></li>
 </ul>
 <hr>
 <% end %>
+
