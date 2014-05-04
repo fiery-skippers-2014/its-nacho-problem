@@ -1,6 +1,6 @@
 
-<div class="row">
-<div id="sign-up" class="small-12 large-4 columns sign-up-form">
+<div id="form" class="row">
+<div id="sign-up" class="small-6 large-centered columns sign-up-form">
 <h3>Sign Up:</h3>
     <%= form_for :user, url: users_path do |f| %>
       <%= f.label :username %>
@@ -11,7 +11,7 @@
       <%= password_field_tag :password %><br>
       <%= label_tag :password_confirmation %>
       <%= password_field_tag :password_confirmation %><br>
-      <%= f.submit 'Submit', id: 'signup' %>
+      <%= f.submit 'Submit', id: 'signup', :class => "button" %>
     <% end %>
 </div>
 </div>
