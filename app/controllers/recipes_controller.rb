@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    api_result = yummly_search_result('bacon', {maxResult: 10})
+    api_result = yummly_search_result('chicken', {maxResult: 1000})
     api_result.length.times do
       Recipe.create(new_recipe_from_yummly(api_result))
       new_recipe_from_yummly(api_result)[:components].each do |ingredient|
@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
     # @top_recipes = current_user.sort_recipes_by_ingredients
     # redirect_to user_
 
-    render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
+    # render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
   end
 
 end

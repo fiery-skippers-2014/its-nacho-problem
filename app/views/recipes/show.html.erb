@@ -1,9 +1,9 @@
 <% @recipe_objects.each do |recipe| %>
 <ul>
+  <li><%= image_tag recipe.img_url %></li>
   <li><%= recipe.name %></li>
   <li><%= recipe.components %></li>
-  <li><%= recipe.img_url %></li>
-  <li><%#= image_tag "#{recipe.img_url[0]}" %></li>
+  <li><%= link_to "See Recipe", "#{recipe.recipe_url}" %></li>
 </ul>
 <hr>
 <% end %>
