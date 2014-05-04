@@ -9,11 +9,6 @@ describe RecipesController do
 
 
   context "#create" do
-    # let(:top_recipes) { double(:top_recipes, :top_recipes => nil) }
-
-    # before(:each) do 
-    #   ApplicationController.any_instance.stub(:current_user).and_return(user)
-    # end
 
     it "should save recipe to the database" do
       controller.stub(:yummly_search_result){result}

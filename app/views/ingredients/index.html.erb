@@ -16,8 +16,8 @@
   <h3>Items in your pantry:</h3>
 </div>
 
-<%= form_for :recipes do |f|%>
-  <%= f.submit %>
+<%= form_for @user, :url => user_nachoresult_path(@user), :method => :get do |f|%>
+  <%= f.submit 'Nacho Problem!'%>
 <% end %>
 
 

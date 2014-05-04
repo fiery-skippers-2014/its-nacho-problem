@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   def show
     @top_recipes = current_user.sort_recipes_by_ingredients
     @recipe_objects = []
-    @top_recipes.each_key {|recipe_name| recipe_objects << Recipe.find_by_name(recipe_name)}
+    @top_recipes.each_key {|recipe_name| @recipe_objects << Recipe.find_by_name(recipe_name)}
   end
 
   def create
