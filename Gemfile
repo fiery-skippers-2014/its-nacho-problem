@@ -55,4 +55,4 @@ gem 'awesome_print'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

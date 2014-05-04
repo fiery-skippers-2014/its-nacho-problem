@@ -2,7 +2,7 @@ class IngredientsController < ApplicationController
 
   def index
     @user = current_user
-    if @search
+    if @user
       @search = params[:search]
       @ingredients = Ingredient.search(@search)
     end
