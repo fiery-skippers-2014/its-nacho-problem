@@ -7,9 +7,12 @@ class RecipesController < ApplicationController
   end
 
   def create
-    api_result = yummly_search_result('chicken', {maxResult: 500})
+    api_result = yummly_search_result('egg', {maxResult: 10})
     api_result.length.times do
       Recipe.create(new_recipe_from_yummly(api_result))
+      new_recipe_from_yummly(api_result)[:components].each do |ingredient|
+        Ingredient.create(name: ingredient)
+      end
       api_result.pop
     end
     render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES

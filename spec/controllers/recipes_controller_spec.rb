@@ -15,6 +15,13 @@ describe RecipesController do
       }.to change {Recipe.count}.by(9)
     end
 
+    it "should save new ingredients to the database" do
+      controller.stub(:yummly_search_result){result}
+      expect {
+        post :create
+      }.to change {Ingredient.count}
+    end
+
     it "should not create with invalid params" do
       controller.stub(:yummly_search_result) {""}
       expect {
