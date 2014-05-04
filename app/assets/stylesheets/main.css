@@ -9,14 +9,6 @@ body {
 }
 
 
-.main-container{
-  width: 100%;
-  margin: 10px auto;
-  padding: 20px;
-  height: 100%;
-
-}
-
 #title{
  text-indent: -9999px;
 }
@@ -44,18 +36,70 @@ html #log-in{
   padding-left: 30%;
 }
 
-.search_bar{
-  margin: 10px 0;
+
+#form {
+  margin-top: 150px;
 }
 
-.search_results{
-  margin: 10px 0;
+.search-results {
+  background: rgba(255,255,255, .5);
+  border-radius: 25px;
+  padding: 10px;
+  max-height: 300px;
+  width: 200px;
+
+  overflow: scroll;
 }
+
+/*navigation---------------------------*/
+
+li {
+  list-style-type: none;
+}
+
+/*html .top-bar {
+  background-color: rgba(255,255,255, .5);
+}*/
+html .top-bar-section {
+  padding-right: 20px;
+}
+
+
+/*users pantry--------------------------*/
 
 .user_pantry{
   text-align: center;
+  margin-top: 30px;
 }
 
-#form {
-  margin-top: 100px;
+.user_pantry_div{
+  margin-top: 80px;
 }
+
+/*#nacho-problem {
+  position: relative;
+  right: -350px;
+}*/
+
+.search-result-container {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+html form{
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
