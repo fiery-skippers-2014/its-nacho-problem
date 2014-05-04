@@ -1,9 +1,10 @@
-<% @recipe_objects.each do |recipe| %>
+<% @recipe_objects.each_with_index do |recipe, index| %>
 <ul>
   <li><%= image_tag recipe.img_url %></li>
   <li><%= recipe.name %></li>
   <li><%= recipe.components %></li>
   <li>Missing Ingredients: <%= @top_recipes["#{recipe.name}"] %></li>
+  <li>You have <%= @percentage_of_ingredients[index] %>% of the ingredients</li>
   <li><%= link_to "See Recipe", "#{recipe.recipe_url}" %></li>
 </ul>
 <hr>

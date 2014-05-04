@@ -8,8 +8,8 @@ class RecipesController < ApplicationController
 
   def show
     @top_recipes = current_user.sort_recipes_by_ingredients
-    @recipe_objects = []
-    @top_recipes.each_key {|recipe_name| @recipe_objects << Recipe.find_by_name(recipe_name)}
+    @recipe_objects = current_user.find_top_recipes_in_db(@top_recipes)
+    @percentage_of_ingredients = current_user.get_percentage_of_missing_ingredients(@top_recipes)
   end
 
   def create

@@ -32,6 +32,18 @@ class User < ActiveRecord::Base
     top_recipes = find_recipe_by_pantry.sort_by { |recipe_name, missing_ingredients| missing_ingredients.length }
       Hash[top_recipes.slice(0, 10)]
   end
+
+  def find_top_recipes_in_db(top_recipes_hash)
+    recipe_objects = []
+    top_recipes_hash.each_key {|recipe_name| recipe_objects << Recipe.find_by_name(recipe_name)}
+    recipe_objects
+  end
+
+  def get_percentage_of_missing_ingredients(top_recipes_hash)
+    find_top_recipes_in_db(top_recipes_hash).map do |recipe|
+      (100 - ((top_recipes_hash["#{recipe.name}"].length / recipe.components.length.to_f) * 100)).round(2)
+    end
+  end
 end
 
 
