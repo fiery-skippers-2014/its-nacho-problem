@@ -1,9 +1,13 @@
-<div class="search_results">
+<div class="row">
+<div class="small-6 large-centered columns">
   <ul>
-  <% @ingredients.each do |item| %>
-    <li><%= item.name %></li>
-  <% end %>
+    <% if @search %>
+      <% @ingredients.each do |item| %>
+        <li><%= item.name %></li>
+      <% end %>
+    <% end %>
   </ul>
 
 
+</div>
 </div>

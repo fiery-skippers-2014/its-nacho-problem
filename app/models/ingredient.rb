@@ -12,5 +12,5 @@ class Ingredient < ActiveRecord::Base
   def self.search(search)
   	Ingredient.search_by_name(search)
   end
- 
+
 end

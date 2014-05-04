@@ -1,0 +1,61 @@
+body {
+  background: url("fridge-background.png") no-repeat center top; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background-position: top;*/
+  margin: 0px;
+}
+
+
+.main-container{
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  height: 100%;
+
+}
+
+#title{
+ text-indent: -9999px;
+}
+
+.header{
+  margin: 15px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.header a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+html #sign-up{
+  display: block;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+
+html #log-in{
+  display: block;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+
+.search_bar{
+  margin: 10px 0;
+}
+
+.search_results{
+  margin: 10px 0;
+}
+
+.user_pantry{
+  text-align: center;
+}
+
+#form {
+  margin-top: 100px;
+}
