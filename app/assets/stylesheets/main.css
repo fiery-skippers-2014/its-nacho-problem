@@ -32,14 +32,16 @@ body {
   text-decoration: none;
 }
 
-#sign-up{
+html #sign-up{
   display: block;
-
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
-.log-in{
-  margin: 0 auto;
-
+html #log-in{
+  display: block;
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
 .search_bar{
