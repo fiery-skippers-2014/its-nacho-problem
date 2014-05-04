@@ -1,11 +1,11 @@
-<div class="row log-in">
-  <div class="large-4 columns ">
+<div class="row">
+  <div id="log-in" class="small-12 large-centered columns ">
     <h3>Log In:</h3>
     <%= form_tag '/sessions' %>
     <%= label_tag :email %>
     <%= email_field_tag :email %><br>
     <%= label_tag :password %>
     <%= password_field_tag :password %><br>
-    <%= submit_tag "Log in" %>
+    <%= submit_tag "Log in", :class => "button" %>
   </div>
 </div>

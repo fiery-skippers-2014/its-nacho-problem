@@ -1,14 +1,10 @@
-body { 
-
-}
-
-.background {
-  background: url("fridge-background.png") no-repeat center center fixed; 
+body {
+  background: url("fridge-background.png") no-repeat center top; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: relative;
+  /*background-position: top;*/
   margin: 0px;
 }
 
@@ -36,14 +32,16 @@ body {
   text-decoration: none;
 }
 
-#sign-up{
+html #sign-up{
   display: block;
-
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
-.log-in{
-  margin: 0 auto;
-
+html #log-in{
+  display: block;
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
 .search_bar{
@@ -56,4 +54,8 @@ body {
 
 .user_pantry{
   text-align: center;
+}
+
+#form {
+  margin-top: 100px;
 }
