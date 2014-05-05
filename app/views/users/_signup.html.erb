@@ -2,6 +2,9 @@
 <div class="row">
   <div id="sign-up" class="small-12 large-centered columns sign-up-form">
     <h3>Sign Up:</h3>
+    <% flash.each do |name, msg| -%>
+      <span class="error"><%= content_tag :div, msg, class: name %></span>
+    <% end %>
     <%= form_for :user, url: users_path do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %><br>
