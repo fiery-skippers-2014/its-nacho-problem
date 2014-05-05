@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
 
   def index
+    #redirect_to user_ingredients_path(user)
+  end
+
+  def new
+    @user = User.new
   end
 
   def create
@@ -12,11 +17,11 @@ class UsersController < ApplicationController
         redirect_to user_ingredients_path(user)
       else
         flash[:error] = user.errors.full_messages.join(' : ')
-        render 'index'
+        redirect_to root_path
       end
     else
       flash[:error] = "Passwords must match!"
-      render 'index'
+      redirect_to root_path
     end
   end
 

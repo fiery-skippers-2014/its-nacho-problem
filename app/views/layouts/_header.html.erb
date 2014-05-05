@@ -4,11 +4,11 @@
 
   <div class="login-signup-container">
   <% if !current_user %>
-  <a id="sign-up-link" href="#">Sign Up</a><br>
-  <a id="login-link" href="#">Log In</a>
+    <a id="sign-up-link" href="#">Sign Up!</a><br>
+    <a id="login-link" href="#">Log In!</a>
     <%#= link_to "#", "Sign Up", :id => "sign-up-link", :class => "right button radius" %>
     <%#= link_to "#", "Log In", :id => "login-link", :class => "right button radius" %>
-  <%else%>
+  <% else %>
     <%= current_user.username %>
     <%= link_to "Log out", logout_path, :class => "right button radius" %>
   <% end %>
@@ -20,7 +20,8 @@
       <% flash.each do |name, msg| -%>
           <%= content_tag :div, msg, class: name %>
       <% end %>
-      <%= form_for :user do |f| %>
+
+      <%= form_for User.new do |f| %>
       <%= f.label :username %>
       <%= f.text_field :username %><br>
       <%= f.label :email %>
