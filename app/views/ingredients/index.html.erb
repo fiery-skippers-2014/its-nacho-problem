@@ -1,27 +1,30 @@
 <div class="row">
-  
-<h3 class="user_pantry">Your Pantry:</h3>
-<h3>Welcome <%= current_user.username %></h3>
-<hr>
 
-<!-- Search bar -->
-<div class="row">
-<div class="small-6 large-centered columns">
-  <h3>Add items to your pantry:</h3>
-  <%= render partial: 'ingredients/search' %>
+  <h3 class="user_pantry"><%= current_user.username.titleize %>'s' Pantry:</h3>
 
-  <h4>Search results:</h4>
-  <%= render partial: 'ingredients/search_results' %>
-</div>
+  <!-- Search bar -->
+  <div class="user_pantry_div">
+    <div class="row">
+      <div class="small-6 large-centered columns ">
+        <h3>Add items to your pantry:</h3>
+        <%= render partial: 'ingredients/search' %>
+        <%= render partial: 'ingredients/nacho' %>
+      </div>
+    </div>
+    
+    <div class="search-result-container">
+    <div class="row">
+      <div class="large-6 columns">
+        <h3>Items in your pantry:</h3>
+        <%= render partial: 'ingredients/user_pantry' %>
+      </div>
+      <div class="large-6 columns">
+        <h3>Search results:</h3>
+        <%= render partial: 'ingredients/search_results' %>
+        </div>
+      </div>
 
-<!-- List of ingredients in your pantry-->
-<div class="user_pantry_div">
-  <h3>Items in your pantry:</h3>
-</div>
 
-<%= form_for @user, :url => user_nachoresult_path(@user), :method => :get do |f|%>
-  <%= f.submit 'Nacho Problem!'%>
-<% end %>
+    </div> 
 
-</div>
-</div>
+
