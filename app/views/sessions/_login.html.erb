@@ -8,4 +8,7 @@
     <%= password_field_tag :password %><br>
     <%= submit_tag "Log in", :class => "button radius" %>
   </div>
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
 </div>
