@@ -33,4 +33,9 @@ class UsersController < ApplicationController
       redirect_to user_ingredients_path(@user)
   end
 
+  def destroy
+    current_user.ingredients.find(params[:id]).destroy
+    redirect_to user_ingredients_path(current_user)
+  end
+
 end
