@@ -1,12 +1,22 @@
+<div id="results-container">
+  <div class="row">
+    <div>
+      <ul class="small-block-grid-3">
+      <% @recipe_objects.each_with_index do |recipe| %>
+      <li>
+        <ul id="recipes">
+          <li><%= image_tag recipe[1].img_url %></li>
+          <h6><li><%= recipe[1].name %></li></h6>
+          <li><%= recipe[1].components %></li>
+          <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
+          <li>You have <%= recipe[0] %>% of the ingredients</li>
+          <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
+        </ul>
+      </li>
+    <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<% @recipe_objects.each_with_index do |recipe| %>
-<ul>
-  <li><%= image_tag recipe[1].img_url %></li>
-  <li><%= recipe[1].name %></li>
-  <li><%= recipe[1].components %></li>
-  <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
-  <li>You have <%= recipe[0] %>% of the ingredients</li>
-  <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
-</ul>
-<% end %>
 

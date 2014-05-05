@@ -1,0 +1,11 @@
+#results-container {
+  margin-top: 1200px;
+}
+
+#recipes {
+   background-color: rgba(255,255,255,0.5);
+   border-radius: 25px;
+   padding: 30px;
+   height: 400px;
+}
+
