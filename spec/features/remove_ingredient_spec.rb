@@ -10,7 +10,7 @@ feature "removing ingredient from pantry" do
     visit user_ingredients_path(user)
   end
 
-  scenario "a user can add click on a checkbox for the ingreident", js: true do
+  scenario "a user can add click on a checkbox for the ingreident" do
     click_on "x"
     expect(page).not_to have_content('apple')
   end
