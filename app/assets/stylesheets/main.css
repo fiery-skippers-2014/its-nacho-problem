@@ -117,6 +117,10 @@ img {
   height: 50%;
 }
 
+.hidden {
+  display: none;
+}
+
 progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
@@ -139,6 +143,8 @@ progress[value]::-webkit-progress-value {
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+
+
 
 
 
