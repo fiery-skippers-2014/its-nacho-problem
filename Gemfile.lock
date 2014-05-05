@@ -111,6 +111,8 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails-ajax (1.0.0.20140320)
+      rails (>= 3.2.1)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -188,6 +190,7 @@ DEPENDENCIES
   pg_search
   rack_session_access
   rails (= 3.2.13)
+  rails-ajax
   rspec-rails
   sass-rails (~> 3.2.3)
   selenium-webdriver
