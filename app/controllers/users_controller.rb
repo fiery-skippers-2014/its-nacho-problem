@@ -12,11 +12,11 @@ class UsersController < ApplicationController
         session[:user_id] = user.id
         redirect_to user_ingredients_path(user)
       else
-        flash[:alert] = user.errors.full_messages.join(' : ')
+        flash[:error] = user.errors.full_messages.join(' : ')
         render 'index'
       end
     else
-      flash[:alert] = "Passwords must match!"
+      flash[:error] = "Passwords must match!"
       render 'index'
     end
   end
