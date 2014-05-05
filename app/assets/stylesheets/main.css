@@ -36,6 +36,10 @@ html #log-in{
   padding-left: 30%;
 }
 
+.login-signup-container {
+  margin-top: 150px;
+}
+
 
 #form {
   margin-top: 150px;
@@ -87,9 +91,7 @@ html .top-bar-section {
   padding-left: 30px;
 }
 
-html form{
-  display: inline;
-}
+
 
 
 
