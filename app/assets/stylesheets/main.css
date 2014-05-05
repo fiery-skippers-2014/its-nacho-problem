@@ -24,6 +24,11 @@ body {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: 50%;
+}
+
 html #sign-up{
   display: block;
   padding-right: 30%;
