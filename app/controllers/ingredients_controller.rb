@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    render :index   #TODO allow a user to add items to the ingredients database?
+    render :index
   end
 
 end
