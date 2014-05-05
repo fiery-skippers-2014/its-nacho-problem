@@ -34,9 +34,22 @@ describe User do
       expect(user.find_recipe_by_pantry).to be_a Hash
     end
     
-    it "should return a hash with #find_recipe_by_pantry" do
-      expect(user.find_recipe_by_pantry).to be_a Hash
+    it "should return a hash with #sort_recipes_by_ingredients(number_of_recipes)" do
+      expect(user.sort_recipes_by_ingredients(1)).to be_a Hash
     end
+
+    it "should return a hash with #find_top_recipes_in_db(top_recipes_hash)" do
+      expect(user.find_top_recipes_in_db({})).to be_an Array
+    end
+
+    it "should return a hash with #get_percentage_of_missing_ingredients(top_recipes_hash)" do
+      expect(user.get_percentage_of_missing_ingredients({})).to be_an Array
+    end    
+
+    it "should return a hash with #sort_recipes_by_percentage(top_recipes_hash)" do
+      expect(user.sort_recipes_by_percentage({})).to be_an Array
+    end
+
   end
 
 end

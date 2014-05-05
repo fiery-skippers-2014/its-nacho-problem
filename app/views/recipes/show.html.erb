@@ -1,10 +1,11 @@
-<% @recipe_objects.each do |recipe| %>
+<% @recipe_objects.each_with_index do |recipe| %>
 <ul>
-  <li><%= image_tag recipe.img_url %></li>
-  <li><%= recipe.name %></li>
-  <li><%= recipe.components %></li>
-  <li>Missing Ingredients: <%= @top_recipes["#{recipe.name}"] %></li>
-  <li><%= link_to "See Recipe", "#{recipe.recipe_url}" %></li>
+  <li><%= image_tag recipe[1].img_url %></li>
+  <li><%= recipe[1].name %></li>
+  <li><%= recipe[1].components %></li>
+  <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
+  <li>You have <%= recipe[0] %>% of the ingredients</li>
+  <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
 </ul>
 <% end %>
 
