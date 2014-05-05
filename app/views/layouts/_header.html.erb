@@ -2,19 +2,21 @@
 <nav class="top-bar" data-topbar>
 <section class="top-bar-section">
 
-  <div class="login-signup-container">
   <% if !current_user %>
-    <p><a id="sign-up-link" href="#">Sign Up!</a></p><br>
-    <p><a id="login-link" href="#">Log In!</a></p>
-    <%#= link_to "Sign Up", "#", :id => "sign-up-link", :class => "right button radius" %>
-    <%#= link_to "Log In", "#", :id => "login-link", :class => "right button radius" %>
+    <!-- <p><a id="sign-up-link" href="#">Sign Up!</a></p><br> -->
+    <!-- <p><a id="login-link" href="#">Log In!</a></p> -->
+    <%= link_to "Sign Up!", "#", :id => "sign-up-link", :class => "right button radius" %>
+    <%= link_to "Log In!", "#", :id => "login-link", :class => "right button radius" %>
   <% else %>
     <p class="right button radius"><%= current_user.username %></p>
 
     <%= link_to "Log out", logout_path, :class => "right button radius" %>
   <% end %>
+</section>
+</nav>
 
 
+  <div class="login-signup-container">
   <div class="row">
     <div id="sign-up" class="small-12 large-centered columns sign-up-form">
       <h3>Sign Up:</h3>
@@ -51,7 +53,4 @@
 
   </div>
 </div>
-</section>
 
-
-</nav>
