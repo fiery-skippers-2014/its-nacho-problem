@@ -2,6 +2,10 @@
   margin-top: 1200px;
 }
 
+body.results-background{
+	background: url("fridge-background.png") no-repeat center bottom !important;
+}
+
 #recipes {
    background-color: rgba(255,255,255,0.5);
    border-radius: 25px;
@@ -9,5 +13,10 @@
    /*height: 400px;*/
    min-height: 350px;
    display: inline-block;
+   width: 300px;
 }
 
+img {
+  width: 100%;
+  height: 50%;
+}
