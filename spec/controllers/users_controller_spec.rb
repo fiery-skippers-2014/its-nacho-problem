@@ -31,4 +31,13 @@ describe UsersController do
       }.to change {user.ingredients.count}.by(1)
     end
   end
+
+  context "#destroy" do
+    it "deletes an ingredient" do
+      stub_current_user(user)
+      expect { 
+        delete :destroy, :}
+    end
+
+  end
 end
