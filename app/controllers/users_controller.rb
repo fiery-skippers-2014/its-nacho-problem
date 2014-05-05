@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.save
-      flash[:notice] = "Your food has been saved!"
+      flash[:alert] = "Your food has been saved!"
       params[:ingredient_ids].length.times do |index|
         @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
       end
