@@ -8,8 +8,8 @@
 //   }
 // }
 
-$(document).ready(function() {
-  $('form#search-form').on('ajax:success', function(e, data) {
-    $('.search-result-container').html(data);
-  })
-});
+// $(document).ready(function() {
+//   $('form#search-form').on('ajax:success', function(e, data) {
+//     $('.search-result-container').html(data);
+//   })
+// });

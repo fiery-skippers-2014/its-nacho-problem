@@ -26,11 +26,11 @@ class UsersController < ApplicationController
         params[:ingredient_ids].length.times do |index|
           @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
         end
-        redirect_to user_ingredients_path(@user)
+        
       end
-    rescue   
-      flash[:error] = "You already have that ingredient!"
-      redirect_to user_ingredients_path(@user)
+      render :partial => "ingredients/user_pantry"
+    # rescue   
+    #   flash[:error] = "You already have that ingredient!"
   end
 
   def destroy
