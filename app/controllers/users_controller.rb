@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
+
     if params[:password] == params[:password_confirmation]
       user = User.new params[:user]
       user.password = params[:password]
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
         end
         redirect_to user_ingredients_path(@user)
       end
-    rescue   
+    rescue
       flash[:error] = "You already have that ingredient!"
       redirect_to user_ingredients_path(@user)
   end

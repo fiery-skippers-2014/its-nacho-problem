@@ -22,12 +22,12 @@
   </head>
 
   <body>
-    <div class="background">
-    <%= render partial: 'layouts/header' %>
-    <%= yield %>
+    <div id="content" class="background">
+      <%= render partial: 'layouts/header' %>
+      <%= yield %>
 
-    
-    <%= javascript_include_tag "application" %>
+
+      <%= javascript_include_tag "application" %>
     </div>
   </body>
 </html>
