@@ -28,9 +28,9 @@ class User < ActiveRecord::Base
     found_recipes
   end
 
-  def sort_recipes_by_ingredients
+  def sort_recipes_by_ingredients(number_of_recipes)
     top_recipes = find_recipe_by_pantry.sort_by { |recipe_name, missing_ingredients| missing_ingredients.length }
-    Hash[top_recipes.slice(0, 10)]
+    Hash[top_recipes.slice(0, number_of_recipes)]
   end
 
 
