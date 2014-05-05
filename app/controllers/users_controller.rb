@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   def index
   end
 
-
   def create
     if params[:password] == params[:password_confirmation]
       user = User.new params[:user]
@@ -23,15 +22,15 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    if @user.save
-      flash[:notice] = "Your food has been saved!"
-      params[:ingredient_ids].length.times do |index|
-        @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
+      if @user.save!
+        params[:ingredient_ids].length.times do |index|
+          @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
+        end
+        redirect_to user_ingredients_path(@user)
       end
-    redirect_to user_ingredients_path(@user)
-    else
-      redirect_to user_ingredients_path(@user), :flash => {:error => "blah"}
-    end
+    rescue   
+      flash[:error] = "You already have that ingredient!"
+      redirect_to user_ingredients_path(@user)
   end
 
 end
