@@ -16,7 +16,7 @@
 
 <!-- List of ingredients in your pantry-->
 <div class="user_pantry_div">
-  <h3>Items in your pantry:</h3>
+  <%= render partial: 'ingredients/user_pantry' %>
 </div>
 
 <%= form_for @user, :url => user_nachoresult_path(@user), :method => :get do |f|%>
