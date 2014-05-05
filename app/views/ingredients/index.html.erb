@@ -5,25 +5,26 @@
   <!-- Search bar -->
   <div class="user_pantry_div">
     <div class="row">
-      <div class="small-9 centered columns ">
+      <div class="small-6 large-centered columns ">
         <h3>Add items to your pantry:</h3>
         <%= render partial: 'ingredients/search' %>
         <%= render partial: 'ingredients/nacho' %>
       </div>
     </div>
-    </div>
+    
     <div class="search-result-container">
     <div class="row">
-      <div class="small-6 large-6 columns">
-        <h4>Search results:</h4>
+      <div class="large-6 columns">
         <h3>Items in your pantry:</h3>
-        <%= render partial: 'ingredients/search_results' %>
       </div>
+      <div class="large-6 columns">
+        <h3>Search results:</h3>
+        <%= render partial: 'ingredients/search_results' %>
+        </div>
       </div>
 
     </div> 
-
+</div>
     <!-- List of ingredients in your pantry-->
 
-  </div>
-
+</div>

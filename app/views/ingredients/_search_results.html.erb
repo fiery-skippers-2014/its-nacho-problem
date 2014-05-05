@@ -1,10 +1,10 @@
 <div class="row">
 <div class="small-6 large-centered columns">
   <div class="search-results">
-  <ul>
+  <ul class="pricing-table">
     <% if @search %>
       <% @ingredients.each do |item| %>
-        <li><%= item.name %></li>
+        <li class="bullet-item"><%= item.name %></li>
       <% end %>
     <% end %>
   </ul>
