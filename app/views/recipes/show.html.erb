@@ -7,6 +7,7 @@
         <ul id="recipes">
           <li><%= image_tag recipe[1].img_url %></li>
           <h6><li><%= recipe[1].name %></li></h6>
+          <progress max="100" value ="<%= recipe[0] %>"></progress>
           <li>You have <%= recipe[0] %>% of the ingredients</li>
           <li>You have: <%= recipe[1].components%></li>
           <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
