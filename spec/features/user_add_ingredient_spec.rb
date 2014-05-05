@@ -13,7 +13,7 @@ feature "adding ingredient into pantry" do
   	 fill_in 'search', with: 'apple'
      click_on 'Search'
      find(:css, "input#ingredient_ids_").set(true)
-     click_on "Update User"
+     click_on "Add to pantry"
      expect(page).to have_content('apple')
   end
 end
