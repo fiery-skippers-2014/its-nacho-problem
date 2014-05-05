@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    render :index
+    @user = current_user
   end
 
 end
