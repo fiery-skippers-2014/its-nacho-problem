@@ -35,8 +35,10 @@ describe UsersController do
   context "#destroy" do
     it "deletes an ingredient" do
       stub_current_user(user)
+      user.ingredients << ingredient
       expect { 
-        delete :destroy, :}
+        delete :destroy, :id => user.id, :ingredient_id => ingredient.id
+        }.to change {user.ingredients.count}.by(-1)
     end
 
   end
