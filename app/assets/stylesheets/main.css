@@ -1,5 +1,5 @@
 body {
-  background: url("fridge-background.png") no-repeat center top; 
+  background: url("fridge-background.png") no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -91,15 +91,26 @@ html .top-bar-section {
   padding-left: 30px;
 }
 
+.error{
+  padding: 1%;
+  margin: 1%, 0;
+  color: white;
+  background-color: #BF3030;
+}
 
+.notice{
+  padding: 1%;
+  margin: 1%, 0;
+  color: white;
+  background-color: #FFCA00;
+}
 
-
-
-
-
-
-
-
+.alert{
+  padding: 1%;
+  margin: 1%, 0;
+  color: white;
+  background-color: #007929;
+}
 
 
 

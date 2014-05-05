@@ -1,0 +1,7 @@
+<h3>Your Pantry:</h3>
+
+<ol>
+<% current_user.ingredients.each do |ingredient| %>
+  <li><%= ingredient.name %></li>
+<% end %>
+</ol>
