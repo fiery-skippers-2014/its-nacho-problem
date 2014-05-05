@@ -7,9 +7,9 @@
      <% @ingredients.each do |item| %>
      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
      <% end %>
-     <%= f.submit :class => "button radius" %>
-     <% end %>
    </div>
  </div>
 </div>
+<%= f.submit :class => "button radius" %>
+<% end %>
 

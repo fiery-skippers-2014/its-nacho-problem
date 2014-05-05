@@ -7,9 +7,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @top_recipes = current_user.sort_recipes_by_ingredients
-    @recipe_objects = []
-    @top_recipes.each_key {|recipe_name| @recipe_objects << Recipe.find_by_name(recipe_name)}
+    @top_recipes = current_user.sort_recipes_by_ingredients(10) #=> hard coded, changes number of recipes
+    @recipe_objects = current_user.sort_recipes_by_percentage(@top_recipes)
   end
 
   def create
@@ -28,7 +27,3 @@ class RecipesController < ApplicationController
   end
 
 end
-
-# 1.Take json object with method in the model
-# 2.Pass those results to a method that parses that data into what we need
-# 3.Create a new Recipe object based on that data.
