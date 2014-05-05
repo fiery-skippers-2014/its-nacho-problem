@@ -2,7 +2,7 @@
   <div id="log-in" class="small-12 large-centered columns ">
     <h3>Log In:</h3>
     <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
+      <span class="error"><%= content_tag :div, msg, class: name %></span>
     <% end %>
 
     <%= form_tag '/sessions' %>
