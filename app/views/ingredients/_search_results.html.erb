@@ -1,15 +1,16 @@
 
 
-<div class="row">
-  <div class="small-6 large-centered columns">
-    <div class="search_results">
+<div class="search-results">
+  <div class="row">
+    <div class="small-6 large-centered columns">
      <%= form_for @user, :url =>user_path(@user), :method => :put do |f|  %>
      <% @ingredients.each do |item| %>
      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
      <% end %>
-     <%= f.submit :value=>"Add to pantry", :class => "button radius" %>
-     <% end %>
+
    </div>
  </div>
 </div>
+<%= f.submit :value=>"Add to pantry", :class => "button radius" %>
+<% end %>
 
