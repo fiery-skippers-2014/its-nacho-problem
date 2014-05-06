@@ -38,8 +38,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @user_favorites = @user.recipes
+    @user_favorites = current_user.favorites
       # params[:user_favs].each do |fav|
       #   @user.recipes << Recipe.find_by_name(fav.name)
       # end

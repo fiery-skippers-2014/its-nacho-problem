@@ -5,8 +5,7 @@ class Recipe < ActiveRecord::Base
   validates_presence_of :name, :recipe_url, :components
   validates_uniqueness_of :name, :recipe_url
 
-  has_many :user_recipes
-  has_many :users, through: :user_recipes
+  has_and_belongs_to_many :users
 end
 
   def new_recipe_from_yummly(api_result)

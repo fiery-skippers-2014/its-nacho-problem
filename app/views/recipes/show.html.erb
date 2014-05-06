@@ -17,7 +17,7 @@
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
 
 
-            <%= form_for user_path(@user) do |f| %>
+            <%= form_for current_user do |f| %>
               <%= f.hidden_field recipe[1].id %>
               <%= f.submit :value=> "Add to favorites", :class => "button radius"%>
             <% end %>
