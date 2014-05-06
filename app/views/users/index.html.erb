@@ -1,4 +1,5 @@
 
+
  <div class="login-signup-container">
     <% flash.each do |name, msg| -%>
         <%= content_tag :div, msg, class: name %>
@@ -28,6 +29,5 @@
       <%= password_field_tag :password %><br>
       <%= submit_tag "Log In", :class => "button radius" %>
     </div>
-
   </div>
 </div>

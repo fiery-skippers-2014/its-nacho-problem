@@ -1,14 +1,14 @@
 <h3>Search results:</h3>
 <%= form_for @user, :remote => true do |f|  %>
-<div class="search-results">
-  <div class="row">
-    <div class="small-6 large-centered columns">
-     <% @ingredients.each do |item| %>
-      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
-     <% end %>
-   </div>
- </div>
-</div>
-<%= f.submit :value=>"Add to pantry", :class => "button radius" %>
+  <div class="search-results">
+    <div class="row">
+      <div class="small-12 large-centered columns">
+        <% @ingredients.each do |item| %>
+        <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= f.submit :value=>"Add to pantry", :class => "button radius" %>
 <% end %>
 

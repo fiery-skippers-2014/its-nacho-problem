@@ -1,9 +1,13 @@
-// $('ul').click(function() {
-//   $('.toggle').slideToggle();
-//   console.log(this);
-// });
+IngredientRevealer = {
+  bindEvents: function(){
+    $('.see_more').on('click', this.toggleIngredients)
+  },
 
-$('ol').on("click", ".see_more", function(event) {
-	event.preventDefault();
-	$(this).next('.toggle').slideToggle();
-});
+  toggleIngredients: function(event){
+    event.preventDefault()
+    $(this).next('.toggle').slideToggle()
+  }
+}
+
+
+

@@ -28,6 +28,7 @@ body {
 }
 
 html #sign-up{
+  margin-top: 15%;
   display: none;
   padding-right: 30%;
   padding-left: 30%;
@@ -35,6 +36,7 @@ html #sign-up{
 
 html #log-in{
   display: none;
+  margin-top: 15%;
   padding-right: 30%;
   padding-left: 30%;
 }
@@ -49,7 +51,7 @@ html #log-in{
 }
 
 .search-results {
-  background: rgba(255,255,255, .5);
+  background: rgba(255,255,255, .9);
   position: center;
   border-radius: 25px;
   padding: 10px;
@@ -105,23 +107,38 @@ html .top-bar-section {
   text-align: left;
 }
 
+h3 {
+  text-align: center;
+}
+
+/*-----------Alerts--------------*/
+
 .error{
   padding: 1%;
-  margin: 1%, 0;
-  color: white;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   background-color: #BF3030;
+  color: white;
 }
 
 .notice{
   padding: 1%;
-  margin: 1%, 0;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   color: white;
   background-color: #FFCA00;
 }
 
 .alert{
   padding: 1%;
-  margin: 1%, 0;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   color: white;
   background-color: #007929;
 }
@@ -159,7 +176,12 @@ progress[value]::-webkit-progress-value {
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-
+/*
+.ingredients li {
+  list-style-type: circle;
+  padding-left: 2%;
+}
+*/
 
 
 

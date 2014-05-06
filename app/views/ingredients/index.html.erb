@@ -1,31 +1,26 @@
-
-
  <h3 class="user_pantry"><%= current_user.username.titleize %>'s Pantry:</h3>
 
-  <!-- Search bar -->
-  <div class="user_pantry_div">
-    <div class="row">
-      <div class="small-6 large-centered columns ">
-        <h3 class="text-center pantry-title">Add items to your pantry:</h3>
-        <div class="clearfix">
-          <%= render partial: 'ingredients/search' %>
-          <%= render partial: 'ingredients/nacho' %>
-        </div>
+<!-- Search bar -->
+<div class="user_pantry_div">
+  <div class="row">
+    <div class="small-6 large-centered columns ">
+      <h3 class="text-center pantry-title">Add items to your pantry:</h3>
+      <div class="clearfix">
+        <%= render partial: 'ingredients/search' %>
+        <%= render partial: 'ingredients/nacho' %>
       </div>
     </div>
   </div>
+</div>
 
+<%= render partial: 'ingredients/notices' unless flash.nil? %>
 
-    <%= render partial: 'ingredients/notices' unless flash.nil? %>
-
-
-    <div class="row">
-      <div class="large-6 columns pantry-container">
-        <%= render partial: 'user_pantry' %>
-      </div>
-
-      <div class="large-6 columns search-result-container">
-      </div>
-    </div>
+<div class="row">
+  <div class="large-6 columns pantry-container">
+    <%= render partial: 'user_pantry' %>
+  </div>
+  <div class="large-6 columns search-result-container">
+  </div>
+</div>
 
 
