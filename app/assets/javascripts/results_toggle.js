@@ -6,13 +6,8 @@ IngredientRevealer = {
   toggleIngredients: function(event){
     event.preventDefault()
     $(this).next('.toggle').slideToggle()
-    // console.log("hello")
   }
 }
 
 
-$(document).ready(function(){
-  IngredientRevealer.bindEvents()
-
-})
 
