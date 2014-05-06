@@ -1,9 +1,9 @@
 #results-container {
-  margin-top: 1200px;
-}
-
-body.results-background{
-	background: url("fridge-background.png") no-repeat center bottom !important;
+	background: url("fridge-background.png") no-repeat center right !important;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: auto;
 }
 
 #recipes {
