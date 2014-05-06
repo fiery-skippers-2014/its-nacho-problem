@@ -16,7 +16,7 @@
             <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
             <%= form_for user_path(@user) do |f| %>
-              <% hidden_field_tag 'user_favs[]', recipe[1].name, recipe[1].recipe_url %>
+              <% check_box_tag 'user_favs[]', recipe[1].name, recipe[1].recipe_url %>
               <%= f.submit :value=> "Add to favorites" %>
             <% end %>
             <%#= link_to "Add to favorites", user_path(@user) %>

@@ -39,11 +39,9 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    if @user.save!
-        params[:user_favs].length.times do |index|
-          @user.recipes << Recipe.find(params[:user_favs][index])
-        end
-    end
+      params[:user_favs].each do |fav|
+        @user.recipes << Recipe.find_by_name(fav.name)
+      end
   end
 
   def destroy
