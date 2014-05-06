@@ -11,8 +11,11 @@
             <li><%= recipe[0] %>% Nacho Problem</li>
           <%= link_to "See more", "#", {:class => "see_more"} %>
           <div class='toggle hidden'>
-            <li>Recipe Needs: <%= recipe[1].components%></li>
-            <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
+            <li class='ingredient-bold'>Recipe Needs: </li>
+            <li><%= recipe[1].components.join(', ')%></li>
+            <br/>
+            <li class='ingredient-bold'>Missing Ingredients:</li> 
+            <li><%= @top_recipes["#{recipe[1].name}"].join(', ') %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
           <div>
         </ul>
