@@ -8,7 +8,7 @@
     <%= link_to "Sign Up!", "#", :id => "sign-up-link", :class => "right button radius" %>
     <%= link_to "Log In!", "#", :id => "login-link", :class => "right button radius" %>
   <% else %>
-
+    <%= link_to "Log out", logout_path, :class => "right button radius" %>
   <% end %>
 </section>
 </nav>
