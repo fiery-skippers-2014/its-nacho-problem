@@ -15,11 +15,14 @@
             <li>Recipe Needs: <%= recipe[1].components%></li>
             <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
-            <%#= form_for user_path(@user) do |f| %>
-              <%# check_box_tag 'user_favs[]', recipe[1].name, recipe[1].recipe_url %>
-              <%#= f.submit :value=> "Add to favorites" %>
-            <%# end %>
-            <%= link_to "Add to favorites", user_path(@user) %>
+
+
+            <%= form_for user_path(@user) do |f| %>
+              <%= f.hidden_field recipe[1].id %>
+              <%= f.submit :value=> "Add to favorites", :class => "button radius"%>
+            <% end %>
+            <%#= link_to "Add to favorites", user_path(@user) %>
+
           <div>
         </ul>
       </li>
@@ -29,6 +32,3 @@
   </div>
 </div>
 </body>
-
-
-
