@@ -8,6 +8,9 @@ body {
   margin: 0px;
 }
 
+.pantry-title {
+  padding: 2%;
+}
 
 #title{
  text-indent: -9999px;
@@ -47,11 +50,13 @@ html #log-in{
 
 .search-results {
   background: rgba(255,255,255, .5);
+  position: center;
   border-radius: 25px;
   padding: 10px;
   max-height: 300px;
   width: 300px;
   overflow: scroll;
+  margin: 0 auto;
 }
 
 /*navigation---------------------------*/
@@ -88,6 +93,16 @@ html .top-bar-section {
 .search-result-container {
   padding-right: 30px;
   padding-left: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-result-container ul {
+  text-align: left;
+}
+
+.search-results{
+  text-align: left;
 }
 
 .error{

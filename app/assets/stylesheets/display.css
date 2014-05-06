@@ -1,9 +1,5 @@
 #results-container {
-	background: url("fridge-background.png") no-repeat center right !important;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: auto;
+	background: #D8E4EB !important;
 }
 
 #recipes {
@@ -19,4 +15,8 @@
 img {
   width: 100%;
   height: 50%;
+}
+
+.results {
+	padding: 2%;
 }
