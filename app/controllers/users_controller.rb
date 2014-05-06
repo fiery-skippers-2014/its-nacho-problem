@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   
   def index
-    redirect_to user_ingredients_path(current_user)
+    if logged_in?
+      redirect_to user_ingredients_path(current_user)
+    end
   end
 
   def new
