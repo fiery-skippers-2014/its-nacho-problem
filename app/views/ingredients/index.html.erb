@@ -16,19 +16,14 @@
 
     <%= render partial: 'ingredients/notices' unless flash.nil? %>
 
-    <div class="search-result-container">
+    
     <div class="row">
-      <div class="large-6 columns">
-        <h3>Items in your pantry:</h3>
-        <%= render partial: 'ingredients/user_pantry' %>
+      <div class="large-6 columns pantry-container">
+        <%= render partial: 'user_pantry' %>
       </div>
-      <div class="large-6 columns">
-        <h3>Search results:</h3>
-        <%= render partial: 'ingredients/search_results' %>
+
+      <div class="large-6 columns search-result-container">
       </div>
-    </div>
-
-
-    </div>
+    </div> 
 
 

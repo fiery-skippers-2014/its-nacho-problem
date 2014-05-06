@@ -22,8 +22,8 @@ class RecipesController < ApplicationController
     end
     # @top_recipes = current_user.sort_recipes_by_ingredients
     # redirect_to user_
-
      render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
+
   end
 
 end

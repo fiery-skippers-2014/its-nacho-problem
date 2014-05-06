@@ -8,7 +8,11 @@ ItsNachoProblem::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
-    resources :ingredients, only: [:index, :new, :create]
+    resources :ingredients, only: [:index, :new, :create] do
+      collection do
+        get 'search'
+      end
+    end
     get '/nachoresult' => 'recipes#show', as: 'nachoresult'
   end
 end
