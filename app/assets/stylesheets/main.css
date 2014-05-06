@@ -28,12 +28,14 @@ body {
 }
 
 html #sign-up{
+  background: rgba(255,255,255, .5);
   display: none;
   padding-right: 30%;
   padding-left: 30%;
 }
 
 html #log-in{
+  background: rgba(255,255,255, .5);
   display: none;
   padding-right: 30%;
   padding-left: 30%;
@@ -49,7 +51,7 @@ html #log-in{
 }
 
 .search-results {
-  background: rgba(255,255,255, .5);
+  background: rgba(255,255,255, .9);
   position: center;
   border-radius: 25px;
   padding: 10px;
@@ -103,6 +105,10 @@ html .top-bar-section {
 
 .search-results{
   text-align: left;
+}
+
+h3 {
+  text-align: center;
 }
 
 .error{
