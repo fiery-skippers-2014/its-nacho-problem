@@ -38,6 +38,11 @@ class UsersController < ApplicationController
     @user_favorites = current_user.recipes
   end
 
+  def favorite_recipe
+    current_user.recipes << Recipe.find(params[:recipe_id])
+    redirect_to user_path(current_user)
+  end
+
   def destroy
     current_user.ingredients.destroy(params[:id])
     render :partial => "ingredients/user_pantry"

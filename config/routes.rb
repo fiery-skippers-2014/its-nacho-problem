@@ -8,6 +8,9 @@ ItsNachoProblem::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
+    collection do
+      post 'favorite_recipe'
+    end
     resources :ingredients, only: [:index, :new, :create] do
       collection do
         get 'search'
