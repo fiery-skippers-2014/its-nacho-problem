@@ -5,7 +5,7 @@
     <div class="small-6 large-centered columns">
      <%= form_for @user, :url =>user_path(@user), :method => :put do |f|  %>
      <% @ingredients.each do |item| %>
-     <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
+      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
      <% end %>
 
    </div>

@@ -3,7 +3,7 @@ ItsNachoProblem::Application.routes.draw do
   get '/logout' => 'sessions#destroy', :as => 'logout'
   root to: 'users#index'
 
-  resources :recipes, only: [:create]
+  resources :recipes, only: [:create, :show]
 
   resources :sessions, only: [:new, :create, :destroy]
 

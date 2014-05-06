@@ -11,7 +11,13 @@
           <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
           <li>You have <%= recipe[0] %>% of the ingredients</li>
           <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
-          <a class="fav-heart" href="#">&#9829;</a>
+          <%= form_for @user, :url => user_path(@user), :method => :get do |f| %>
+            <%= f.submit 'user_favorites[]', '&#9829;', :class => "fav-heart"%>
+          <% end %>
+
+          <% @ingredients.each do |item| %>
+      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
+     <% end %>
         </ul>
       </li>
     <% end %>
