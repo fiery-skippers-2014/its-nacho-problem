@@ -2,7 +2,7 @@
 <%= form_for @user, :remote => true do |f|  %>
 <div class="search-results">
   <div class="row">
-    <div class="small-6 large-centered columns">
+    <div class="small-12 large-centered columns">
      <% @ingredients.each do |item| %>
      <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
      <% end %>
