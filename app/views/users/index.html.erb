@@ -1,7 +1,7 @@
- <div class="login-signup-container">
-    <% flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, class: name %>
-    <% end %>
+<div class="login-signup-container">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end %>
   <div class="row">
     <div id="sign-up" class="small-12 large-centered columns sign-up-form">
       <h3>Sign Up:</h3>
@@ -27,6 +27,5 @@
       <%= password_field_tag :password %><br>
       <%= submit_tag "Log In", :class => "button radius" %>
     </div>
-
   </div>
 </div>
