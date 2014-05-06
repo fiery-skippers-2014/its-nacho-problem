@@ -28,13 +28,13 @@ body {
 }
 
 html #sign-up{
-  display: block;
+  display: none;
   padding-right: 30%;
   padding-left: 30%;
 }
 
 html #log-in{
-  display: block;
+  display: none;
   padding-right: 30%;
   padding-left: 30%;
 }

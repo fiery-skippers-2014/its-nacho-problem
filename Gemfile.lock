@@ -189,6 +189,7 @@ DEPENDENCIES
   rack_session_access
   rails (= 3.2.13)
   rspec-rails
+  sass
   sass-rails (~> 3.2.3)
   selenium-webdriver
   shoulda-matchers
