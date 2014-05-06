@@ -18,6 +18,6 @@ feature 'searching for ingredient in serach bar' do
 
   scenario "a user will be shown missing ingredients for each recipe" do
     click_on 'Nacho Problem'
-    expect(page).to have_content('Missing Ingredients: ["pie"]')
+    expect(page).to have_content('Missing Ingredients: pie')
   end
 end
