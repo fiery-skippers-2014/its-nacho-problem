@@ -8,8 +8,8 @@
     <%= link_to "Sign Up!", "#", :id => "sign-up-link", :class => "right button radius" %>
     <%= link_to "Log In!", "#", :id => "login-link", :class => "right button radius" %>
   <% else %>
-    <p class="right button radius"><%= current_user.username %></p>
-
+    <%= link_to "Pantry", user_ingredients_path(@user), :class => "right button radius" %>
+    <%= link_to "Favorites", user_path(@user), :class => "right button radius" %>
     <%= link_to "Log out", logout_path, :class => "right button radius" %>
   <% end %>
 </section>

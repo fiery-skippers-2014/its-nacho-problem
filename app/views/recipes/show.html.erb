@@ -14,6 +14,8 @@
             <li>Recipe Needs: <%= recipe[1].components%></li>
             <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
+            <%= link_to "Favorite", user_path(@user) %>
+            <!--           <img src="../../../assets/images/heart.png"> -->
           <div>
         </ul>
       </li>
@@ -23,5 +25,3 @@
   </div>
 </div>
 </body>
-
-
