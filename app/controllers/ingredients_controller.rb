@@ -1,11 +1,13 @@
 class IngredientsController < ApplicationController
-
+  before_filter :authenticate!
   def index
-    @user = current_user
-    if @user
-      @search = params[:search]
-      @ingredients = Ingredient.search(@search)
-    end
+    
+  end
+
+  def search
+    @search = params[:search]
+    @ingredients = Ingredient.search(@search)
+    render partial: 'search_results', locals: {ingredients: @ingredients}
   end
 
   def new
