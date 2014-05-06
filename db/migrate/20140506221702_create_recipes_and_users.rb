@@ -1,4 +1,4 @@
-class CreateUserRecipes < ActiveRecord::Migration
+class CreateRecipesAndUsers < ActiveRecord::Migration
   def change
     create_table :recipes_users do |col|
       col.belongs_to :recipe

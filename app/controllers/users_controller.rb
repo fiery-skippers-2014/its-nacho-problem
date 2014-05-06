@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  
+
   def index
-    #redirect_to user_ingredients_path(user)
   end
 
   def new
@@ -33,15 +32,10 @@ class UsersController < ApplicationController
         end
       end
       render :partial => "ingredients/user_pantry"
-    # rescue
-    #   flash[:error] = "You already have that ingredient!"
   end
 
   def show
-    @user_favorites = current_user.favorites
-      # params[:user_favs].each do |fav|
-      #   @user.recipes << Recipe.find_by_name(fav.name)
-      # end
+    @user_favorites = current_user.recipes
   end
 
   def destroy

@@ -1,36 +1,33 @@
-
 <div id="results-container">
   <div class="row">
     <div>
       <ol class="large-block-grid-3 results">
-
       <% @recipe_objects.each_with_index do |recipe| %>
       <li>
         <ul id="recipes">
           <li><%= image_tag recipe[1].img_url %></li>
           <h6><li><%= recipe[1].name %></li></h6>
           <progress max="100" value ="<%= recipe[0] %>"></progress>
-            <li><%= recipe[0] %>% Nacho Problem</li>
+          <li><%= recipe[0] %>% Nacho Problem</li>
           <%= link_to "See more", "#", {:class => "see_more"} %>
           <div class='toggle hidden'>
-            <li>Recipe Needs: <%= recipe[1].components%></li>
-            <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
+            <li class='ingredient-bold'>Recipe Needs:</li>
+            <li><%= recipe[1].components.join(', ')%></li>
+            <br/>
+            <li class='ingredient-bold'>Missing Ingredients:</li>
+            <li><%= @top_recipes["#{recipe[1].name}"].join(', ') %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
-
-
             <%= form_for current_user do |f| %>
-              <%= f.hidden_field recipe[1].id %>
+              <%= f.hidden_field(:recipe => recipe[1].id) %>
               <%= f.submit :value=> "Add to favorites", :class => "button radius"%>
             <% end %>
-            <%#= link_to "Add to favorites", user_path(@user) %>
-
           <div>
         </ul>
       </li>
-    <% end %>
+      <% end %>
       </ol>
     </div>
   </div>
 </div>
-</body>
+
 

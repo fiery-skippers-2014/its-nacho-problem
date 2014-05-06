@@ -1,8 +1,8 @@
 <%= @user.errors.full_messages.first if @user.errors.any? %>
 
 <h3><%= current_user.username.titleize %>'s Favorite Recipes:</h3>
-
-
-<%= @user_favorites.each do |fav| %>
-  <p><%= link_to "fav.name", "fav.recipe_url" %></p><br>
-<% end %>
+<div>
+    <%= @user_favorites.each do |fav| %>
+      <p><%= link_to "fav.name", "fav.recipe_url" %></p><br>
+    <% end %>
+</div>
