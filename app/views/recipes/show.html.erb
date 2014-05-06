@@ -15,8 +15,12 @@
             <li>Recipe Needs: <%= recipe[1].components%></li>
             <li>Missing Ingredients: <%= @top_recipes["#{recipe[1].name}"] %></li>
             <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
-            <%= link_to "Favorite", user_path(@user) %>
-            <!--           <img src="../../../assets/images/heart.png"> -->
+            <% @user_favorites.push [recipe[1].recipe_url, recipe[1].name] %>
+            <%= form_for user_path(@user), :method=> 'get' do |f| %>
+              <% hidden_field_tag @user_favorites %>
+              <%= f.submit :value=> "Add to favorites" %>
+            <% end %>
+            <%#= link_to "Add to favorites", user_path(@user) %>
           <div>
         </ul>
       </li>
@@ -26,3 +30,4 @@
   </div>
 </div>
 </body>
+
