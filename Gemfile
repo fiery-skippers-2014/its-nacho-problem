@@ -11,6 +11,7 @@ gem 'sass'
 gem 'dotenv'
 gem 'yummly'
 gem 'pg_search'
+gem 'rails3-jquery-autocomplete'
 
 gem 'pg'
 group :development, :test do
