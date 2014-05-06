@@ -106,7 +106,7 @@ CREATE TABLE recipes (
     name character varying(255),
     recipe_url character varying(255),
     components text,
-    img_url character varying(255) DEFAULT 'http://imgur.com/YwmTBuJ'::character varying
+    img_url character varying(255) DEFAULT '/assets/nachoprob.png'::character varying
 );
 
 
@@ -285,3 +285,5 @@ INSERT INTO schema_migrations (version) VALUES ('20140503203244');
 INSERT INTO schema_migrations (version) VALUES ('20140503203317');
 
 INSERT INTO schema_migrations (version) VALUES ('20140505050234');
+
+INSERT INTO schema_migrations (version) VALUES ('20140506011828');
