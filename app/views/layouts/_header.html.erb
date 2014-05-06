@@ -1,11 +1,56 @@
 
-<!-- nav bar links to user's pantry, logout button, feature creep: user's profile with favorites -->
 <nav class="top-bar" data-topbar>
-<section  class="top-bar-section">
-<%= link_to "Log out", logout_path, :class => "right button radius" %> 
-<%#= link_to "Your Pantry", user_ingredients_path(user) %> 
-<%= link_to "Your Profile", "#", :class => "right button radius" %>
+<section class="top-bar-section">
+
+  <% if !current_user %>
+    <!-- <p><a id="sign-up-link" href="#">Sign Up!</a></p><br> -->
+    <!-- <p><a id="login-link" href="#">Log In!</a></p> -->
+    <%= link_to "Sign Up!", "#", :id => "sign-up-link", :class => "right button radius" %>
+    <%= link_to "Log In!", "#", :id => "login-link", :class => "right button radius" %>
+  <% else %>
+    <p class="right button radius"><%= current_user.username %></p>
+
+    <%= link_to "Log out", logout_path, :class => "right button radius" %>
+  <% end %>
 </section>
-
-
 </nav>
+
+
+  <div class="login-signup-container">
+  <div class="row">
+    <div id="sign-up" class="small-12 large-centered columns sign-up-form">
+      <h3>Sign Up:</h3>
+      <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: name %>
+      <% end %>
+
+      <%= form_for User.new do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username %><br>
+      <%= f.label :email %>
+      <%= f.email_field :email %><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %><br>
+      <%= label_tag :password_confirmation %>
+      <%= password_field_tag :password_confirmation %><br>
+      <%= f.submit 'Sign Up', :class => "button radius" %>
+      <% end %>
+    </div>
+
+    <div id="log-in" class="small-12 large-centered columns ">
+      <h3>Log In:</h3>
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+
+      <%= form_tag '/sessions' %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %><br>
+      <%= submit_tag "Log In", :class => "button radius" %>
+    </div>
+
+  </div>
+</div>
+

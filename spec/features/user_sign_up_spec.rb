@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-feature 'user sign up' do 
+feature 'user sign up' do
   let!(:user) {FactoryGirl.create :user}
-  let!(:user_attr) {FactoryGirl.attributes_for :user}  
+  let!(:user_attr) {FactoryGirl.attributes_for :user}
 
   scenario "able to see sign up page when logged out" do
     visit root_path
@@ -17,7 +17,7 @@ feature 'user sign up' do
       fill_in 'Password',               :with => user_attr[:password]
       fill_in 'Password confirmation',  :with => user_attr[:password]
     end
-      click_on 'Submit'
+      click_on 'Sign Up'
 
     expect(page).to have_content(user_attr[:username])
 
