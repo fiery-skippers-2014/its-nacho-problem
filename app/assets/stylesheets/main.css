@@ -36,7 +36,7 @@ html #sign-up{
 
 html #log-in{
   display: none;
-  margin-top: 20%;
+  margin-top: 15%;
   padding-right: 30%;
   padding-left: 30%;
 }
@@ -111,23 +111,34 @@ h3 {
   text-align: center;
 }
 
+/*-----------Alerts--------------*/
+
 .error{
   padding: 1%;
-  margin: 1%, 0;
-  color: white;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   background-color: #BF3030;
+  color: white;
 }
 
 .notice{
   padding: 1%;
-  margin: 1%, 0;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   color: white;
   background-color: #FFCA00;
 }
 
 .alert{
   padding: 1%;
-  margin: 1%, 0;
+  margin: 25% auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
   color: white;
   background-color: #007929;
 }
@@ -164,7 +175,12 @@ progress[value]::-webkit-progress-value {
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
-
+/*
+.ingredients li {
+  list-style-type: circle;
+  padding-left: 2%;
+}
+*/
 
 
 
