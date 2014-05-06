@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.ingredients.find(params[:id]).destroy
+    current_user.ingredients.destroy(params[:id])
     render :partial => "ingredients/user_pantry"
   end
 
