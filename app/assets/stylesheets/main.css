@@ -184,4 +184,11 @@ progress[value]::-webkit-progress-value {
 */
 
 
+/*---------- Users's Favorite Recipe Page-------------*/
 
+#favorite_recipe_list {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
