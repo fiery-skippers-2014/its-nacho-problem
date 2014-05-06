@@ -28,15 +28,15 @@ body {
 }
 
 html #sign-up{
-  background: rgba(255,255,255, .5);
+  margin-top: 15%;
   display: none;
   padding-right: 30%;
   padding-left: 30%;
 }
 
 html #log-in{
-  background: rgba(255,255,255, .5);
   display: none;
+  margin-top: 20%;
   padding-right: 30%;
   padding-left: 30%;
 }
