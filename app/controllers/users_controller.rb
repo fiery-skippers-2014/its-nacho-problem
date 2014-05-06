@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @user_favorites =
+    @user_favorites
   end
 
   def destroy
