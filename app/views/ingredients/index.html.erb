@@ -4,9 +4,11 @@
   <div class="user_pantry_div">
     <div class="row">
       <div class="small-6 large-centered columns ">
-        <h3>Add items to your pantry:</h3>
-        <%= render partial: 'ingredients/search' %>
-        <%= render partial: 'ingredients/nacho' %>
+        <h3 class="text-center pantry-title">Add items to your pantry:</h3>
+        <div class="clearfix">
+          <%= render partial: 'ingredients/search' %>
+          <%= render partial: 'ingredients/nacho' %>
+        </div>
       </div>
     </div>
   </div>
