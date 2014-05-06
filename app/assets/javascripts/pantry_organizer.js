@@ -22,7 +22,3 @@ PantryOrganizer = {
 
 
 
-$(document).ready(function(){
-  PantryOrganizer.bindEvents()
-
-})
