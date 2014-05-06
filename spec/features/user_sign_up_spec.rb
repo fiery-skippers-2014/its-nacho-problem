@@ -16,8 +16,8 @@ feature 'user sign up' do
       fill_in 'Email',                  :with => user_attr[:email]
       fill_in 'Password',               :with => user_attr[:password]
       fill_in 'Password confirmation',  :with => user_attr[:password]
-    end
       click_on 'Sign Up'
+    end
 
     expect(page).to have_content(user_attr[:username])
 

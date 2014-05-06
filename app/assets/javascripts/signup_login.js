@@ -5,10 +5,12 @@ UserIntro = {
   },
 
   signupForm: function(){
+    $('#log-in').hide()
     $('#sign-up').slideToggle()
   },
 
   loginForm: function(){
+    $('#sign-up').hide()
     $('#log-in').slideToggle()
   }
 }
