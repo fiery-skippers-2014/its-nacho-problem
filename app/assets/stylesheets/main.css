@@ -188,6 +188,10 @@ progress[value]::-webkit-progress-value {
   text-align: center;
 }
 
+.favorites-page {
+  background: #D8E4EB !important;
+}
+
 /*------------ pagination --------------------------*/
 .pagination {
   text-align: center;
@@ -206,3 +210,4 @@ progress[value]::-webkit-progress-value {
   background-color: #008CBA;
   color: #fff;
 }
+

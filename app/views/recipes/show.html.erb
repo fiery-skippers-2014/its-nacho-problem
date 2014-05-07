@@ -7,8 +7,8 @@
       <ol class="large-block-grid-3 results">
       <% @paginatable_array.each_with_index do |recipe| %>
       <li>
-        <ul id="recipes">
-          <li><%= image_tag recipe[1].img_url %></li>
+        <ul class="recipes">
+          <li><%= image_tag recipe[1].img_url, :class => "foodpic"%></li>
           <h6><li><%= recipe[1].name %></li></h6>
           <progress max="100" value ="<%= recipe[0] %>"></progress>
           <li><%= recipe[0] %>% Nacho Problem</li>
