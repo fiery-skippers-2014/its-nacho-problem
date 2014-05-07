@@ -4,12 +4,11 @@ FactoryGirl.define do
     username { Faker::Name.name}
     email { Faker::Internet.email}
     password {Faker::Internet.password}
-    # ingredient
+
   end
 
   factory :ingredient do 
     name { 'apple' }
-    # user 
   end
 
   factory :user_ingredient do
