@@ -42,10 +42,6 @@ html #log-in {
   padding-right: 5px;
 }
 
-/*.top-bar-section a {
-  width: 10px;
-}*/
-
 .favorites {
   width: auto;
 }
@@ -72,6 +68,8 @@ progress {
   margin: 0 auto;
   text-align: center;
 }
+
+
 
 
 
