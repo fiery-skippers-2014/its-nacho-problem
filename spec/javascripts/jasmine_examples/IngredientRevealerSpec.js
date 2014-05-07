@@ -1,10 +1,21 @@
-describe("IngredientRevealer.bindEvents", function(){
+describe("IngredientRevealer", function(){
+  var seeMore = $('.see_more')
+  var click = jQuery.Event("click", { target: $('.see_more') });
+  spyOn(seeMore, 'click')
   it("should bind button to click event", function(){
-    var seeMore = $('.see_more')
-    spyOn(seeMore, 'click')
     IngredientRevealer.bindEvents()
     seeMore.click()
     expect(IngredientRevealer.toggleIngredients).toHaveBeenCalled
   });
+
+  // it("should toggle the ingredients display when clicked", function(){
+  //   IngredientRevealer.bindEvents()
+  //   debugger
+  //   // IngredientRevealer.toggleIngredients(event)
+  //   seeMore.click()
+  //   expect('.toggle hidden').toHaveCss({"display": "block"})
+  // })
 });
+
+
 
