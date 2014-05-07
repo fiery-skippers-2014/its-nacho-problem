@@ -1,7 +1,5 @@
 require 'spec_helper'
+include AuthenticationHelper
 
-describe IngredientsController do
-  it "should exist" do
-    expect(response).to be_ok
-  end
-end
+# Do we need to test this controller?
+#The only action it has is search and we have feature tests for the search

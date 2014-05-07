@@ -16,6 +16,12 @@ feature 'searching for ingredient in serach bar' do
     expect(page).to have_content('Apple Pie')
   end
 
+  scenario "a user will not be shown recipes for ingredients that they don't have" do
+    visit user_ingredients_path(user)
+    click_on 'Nacho Problem'
+    expect(page).to_not have_content('Fried Chicken')
+  end
+
   scenario "a user will be shown missing ingredients for each recipe" do
     visit user_ingredients_path(user)
     click_on 'Nacho Problem'
