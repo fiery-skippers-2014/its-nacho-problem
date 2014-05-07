@@ -6,13 +6,14 @@ class User < ActiveRecord::Base
 
   has_many :user_ingredients
   has_many :ingredients, through: :user_ingredients
+  has_and_belongs_to_many :recipes
 
   has_secure_password
 
   def get_name
     self.ingredients.map do |obj|
-      obj.name 
-    end 
+      obj.name
+    end
   end
 
   def get_keyword

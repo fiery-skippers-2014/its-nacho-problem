@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+
   def index
     if logged_in?
       redirect_to user_ingredients_path(current_user)
@@ -33,11 +33,16 @@ class UsersController < ApplicationController
           current_user.ingredients << Ingredient.find(params[:ingredient_ids][index])
         end
       end
-
       render :partial => "ingredients/user_pantry"
-    # rescue   
-    #   flash[:error] = "You already have that ingredient!"
+  end
 
+  def show
+    @user_favorites = current_user.recipes
+  end
+
+  def favorite_recipe
+    current_user.recipes << Recipe.find(params[:recipe_id])
+    redirect_to user_path(current_user)
   end
 
   def destroy

@@ -164,15 +164,15 @@ progress[value] {
 
 progress[value]::-webkit-progress-value {
   background-image:
-     -webkit-linear-gradient(-45deg, 
-                             transparent 33%, rgba(0, 0, 0, .1) 33%, 
+     -webkit-linear-gradient(-45deg,
+                             transparent 33%, rgba(0, 0, 0, .1) 33%,
                              rgba(0,0, 0, .1) 66%, transparent 66%),
-     -webkit-linear-gradient(top, 
-                             rgba(255, 255, 255, .25), 
+     -webkit-linear-gradient(top,
+                             rgba(255, 255, 255, .25),
                              rgba(0, 0, 0, .25)),
      -webkit-linear-gradient(left, #75bdd1, #5DE1F0);
 
-    border-radius: 2px; 
+    border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
@@ -184,4 +184,11 @@ progress[value]::-webkit-progress-value {
 */
 
 
+/*---------- Users's Favorite Recipe Page-------------*/
 
+#favorite_recipe_list {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
+  text-align: center;
+}

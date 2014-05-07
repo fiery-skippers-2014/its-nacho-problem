@@ -1,1 +1,15 @@
 <%= @user.errors.full_messages.first if @user.errors.any? %>
+
+<h3><%= current_user.username.titleize %>'s Favorite Recipes:</h3>
+<hr>
+
+<div id="favorite_recipe_list">
+  <ul>
+    <% @user_favorites.each do |fav| %>
+      <li><a href="<%= fav.recipe_url %>"><%= fav.name %></a></li> <!-- refactor to a link_to -->
+    <% end %>
+  </ul>
+
+<%= link_to "Your Pantry", user_ingredients_path(current_user), :class => "button radius" %>
+<%= link_to "All Recipes", user_nachoresult_path(current_user), :class => "button radius" %>
+</div>
