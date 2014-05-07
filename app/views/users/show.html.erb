@@ -3,13 +3,36 @@
 <h3><%= current_user.username.titleize %>'s Favorite Recipes:</h3>
 <hr>
 
-<div id="favorite_recipe_list">
-  <ul>
-    <% @user_favorites.each do |fav| %>
-      <li><a href="<%= fav.recipe_url %>"><%= fav.name %></a></li> <!-- refactor to a link_to -->
-    <% end %>
-  </ul>
-
-<%= link_to "Your Pantry", user_ingredients_path(current_user), :class => "button radius" %>
-<%= link_to "All Recipes", user_nachoresult_path(current_user), :class => "button radius" %>
+<div class="favorites-page">
+	<div class="row">
+		<div class="small-6 large-centered columns clearfix">
+		<%= link_to "Your Pantry", user_ingredients_path(current_user), :class => "button radius left" %>
+		<%= link_to "All Recipes", user_nachoresult_path(current_user), :class => "button radius right" %>
+			</div>
+		</div>
+	<div class="row">
+		<div class="results">
+			<div id="favorite_recipe_list">
+	  		<ul class="large-block-grid-3">
+	    		<% @user_favorites.each do |favorite| %>
+	    			<li>
+	    				<ul class="favorites">
+		      			<li><%= image_tag favorite.img_url, :class => "foodpic" %></li>
+	          		<h6><li><%= favorite.name %></li></h6>
+	          		<%= link_to "See more", "#", {:class => "see_more"} %>
+	          		<div class='toggle hidden'>
+				            <li class='ingredient-bold'>Recipe Needs:</li>
+				            <li><%= favorite.components.join(', ')%></li>
+				            <br/>
+				            <li class="text-center"><%= link_to "See Recipe", "#{favorite.recipe_url}" %></li>
+								</div>
+				      </ul>
+						</li>
+				  <% end %>
+	  		</ul>
+			</div>
+		</div>
+		<%= paginate @user_favorites %>
 </div>
+</div>
+

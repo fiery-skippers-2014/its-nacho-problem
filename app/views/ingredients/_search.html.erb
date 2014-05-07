@@ -1,5 +1,5 @@
 <%= form_tag search_user_ingredients_path(@user), :method => 'get', id: 'search-form', remote: true do %>
   <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil, :class => "button radius button left" %>
+  <%= submit_tag "Search", :name => nil, :class => "button radius left" %>
 <% end %>
 
