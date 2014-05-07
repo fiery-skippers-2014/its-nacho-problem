@@ -7,6 +7,7 @@ feature "user can favorite a recipe" do
   before(:each) do
     page.set_rack_session(:user_id => user.id)
     user.recipes << recipe
+    visit user_nachoresult_path(user)
   end
 
   scenario "a user can click on See More to toggle down the recipe info" do
@@ -19,6 +20,7 @@ feature "user can favorite a recipe" do
     visit user_nachoresult_path(user)
     click_on 'Add to favorites'
     expect(page).to have_content('Favorite Recipes')
+    expect(page).to have_content(recipe.name)
   end
 
   # scenario "a user can click on See Recipe on their favorite and go to the yummly recipe site" do

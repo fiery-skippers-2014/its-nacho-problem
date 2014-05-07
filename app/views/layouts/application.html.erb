@@ -18,7 +18,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="background">
+    <div class="background" id="bg" >
       <%= render partial: 'layouts/header' %>
       <%= yield %>
       <%= javascript_include_tag "application" %>
