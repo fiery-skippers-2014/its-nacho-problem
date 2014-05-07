@@ -1,9 +1,8 @@
  <h3 class="user_pantry"><%= current_user.username.titleize %>'s Pantry:</h3>
-
-<!-- Search bar -->
+<!-- Search bar and buttons -->
 <div class="user_pantry_div">
   <div class="row">
-    <div class="small-6 large-centered columns ">
+    <div class="small-6 large-centered columns">
       <h3 class="text-center pantry-title">Add items to your pantry:</h3>
       <div class="clearfix">
         <%= render partial: 'ingredients/search' %>
@@ -13,9 +12,8 @@
     </div>
   </div>
 </div>
-
 <%= render partial: 'ingredients/notices' unless flash.nil? %>
-
+<!-- User Pantry -->
 <div class="row">
   <div class="large-6 columns pantry-container">
     <%= render partial: 'user_pantry' %>
@@ -23,5 +21,3 @@
   <div class="large-6 columns search-result-container">
   </div>
 </div>
-
-
