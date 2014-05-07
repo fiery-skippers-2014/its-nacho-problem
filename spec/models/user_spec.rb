@@ -11,7 +11,7 @@ describe User do
   context "Associations" do
     it {should have_many(:user_ingredients)}
     it {should have_many(:ingredients).through(:user_ingredients)}
-
+    it {should have_and_belong_to_many(:recipes)}
   end
 
   context "Comparing pantry with database" do
