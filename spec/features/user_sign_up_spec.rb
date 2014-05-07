@@ -35,13 +35,14 @@ feature 'user sign up' do
   end
 
   # scenario "existing user can log in" do
+  # page.set_rack_session(:user_id => user.id)
   #   visit root_path
   #   within 'div#log-in' do
-  #     fill_in 'Email',                  :with => "batman@batman.com"
-  #     fill_in 'Password',               :with => "batman"
+  #     fill_in 'Email',                  :with => user_attr[:email]
+  #     fill_in 'Password',               :with => user_attr[:password]
   #     click_on 'Log In'
   #   end
-  #   expect(page).to have_content("Batman's Pantry")
+  #   expect(page).to have_content("Pantry")
   # end
 
   scenario "new user can not log in without signing up first" do
