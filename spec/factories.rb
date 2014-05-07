@@ -8,7 +8,7 @@ FactoryGirl.define do
   end
 
   factory :ingredient do 
-    name { 'apple' }
+    name { Faker::Lorem.word }
   end
 
   factory :user_ingredient do
@@ -17,10 +17,10 @@ FactoryGirl.define do
   end
 
   factory :recipe do 
-    name {'apple pie'}
-    recipe_url {'www.applepie.com'}
-    components {['apple', 'pie']}
-    img_url {Faker::Internet.domain_name}
+    name {Faker::Lorem.word}
+    recipe_url {Faker::Internet.url}
+    components {[Faker::Lorem.word, Faker::Lorem.word, Faker::Lorem.word, Faker::Lorem.word]}
+    img_url {Faker::Internet.url}
   end
   
 
