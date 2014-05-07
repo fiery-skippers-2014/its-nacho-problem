@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
   def index
+    if logged_in?
+      redirect_to user_ingredients_path(current_user)
+    end
   end
 
   def new
@@ -25,10 +28,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
-      if @user.save!
+      if current_user.save
         params[:ingredient_ids].length.times do |index|
-          @user.ingredients << Ingredient.find(params[:ingredient_ids][index])
+          current_user.ingredients << Ingredient.find(params[:ingredient_ids][index])
         end
       end
       render :partial => "ingredients/user_pantry"
