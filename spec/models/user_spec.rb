@@ -17,22 +17,32 @@ describe User do
 
   context "Comparing pantry with database" do
     let(:user){FactoryGirl.create(:user)}
-    let(:ingredient){FactoryGirl.create(:ingredient)}
-    let(:recipe){FactoryGirl.create(:recipe)}
-    recipe_all = []
-    4.times do 
-      recipe_all << FactoryGirl.create(:recipe)
-    end
+    recipe1 = Recipe.create(name: "Pie", components: ["apple", "crust", "salt", "sugar"], recipe_url: "something1")
+    recipe2 = Recipe.create(name: "Sandwich", components: ["turkey", "apple", "salt", "sugar"], recipe_url: "something2")
+    recipe3 = Recipe.create(name: "mac_and_cheese", components: ["pasta", "cheese", "salt", "sugar"], recipe_url: "something3")
+    recipe4 = Recipe.create(name: "bats", components: ["fur", "claws", "ear", "sugar"], recipe_url: "something4")
+    
+    recipe_all = [recipe1, recipe2, recipe3, recipe4]
+
+    
+
     let(:recipes) {recipe_all}
 
     before(:each) do
-      user.ingredients << ingredient
+      user.ingredients = []
     end
 
-    context "#{}sort_recipes_by_ingredients"
+    context "#{}sort_recipes_by_ingredients" do 
+
       it "should return a hash with" do
         expect(user.sort_recipes_by_ingredients(recipes, 4)).to be_a Hash
       end
+
+      it "should return 4 recipes" do 
+        expect(user.sort_recipes_by_ingredients(recipes, 3).length).to eq(3)
+      end
+
+    end
 
     it "should return a hash with #sort_recipes_by_percentage(top_recipes_hash)" do
       expect(user.sort_recipes_by_percentage({})).to be_an Array

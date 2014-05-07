@@ -25,16 +25,6 @@ class User < ActiveRecord::Base
 
   private
 
-  def get_user_ingredient_names
-    self.ingredients.map do |obj|
-      obj.name
-    end
-  end
-
-  def get_keyword
-    get_user_ingredient_names.inject({}) {|hash, element| hash[element[0..[4, element.size].min]] = element; hash}
-  end
-
   def find_recipe_by_pantry(recipe_data)
     pantry_hashed = get_keyword
     found_recipes = {}
@@ -42,6 +32,16 @@ class User < ActiveRecord::Base
       found_recipes[recipe_obj.name] = recipe_obj.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
     end
     found_recipes
+  end
+
+  def get_keyword
+    get_user_ingredient_names.inject({}) {|hash, element| hash[element[0..[4, element.size].min]] = element; hash}
+  end
+
+  def get_user_ingredient_names
+    self.ingredients.map do |obj|
+      obj.name
+    end
   end
 
   def find_top_recipes_in_db(top_recipes_hash)
