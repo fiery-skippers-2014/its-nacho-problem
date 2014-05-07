@@ -1,10 +1,9 @@
-body {
+.background {
   background: url("fridge-background.png") no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /*background-position: top;*/
   margin: 0px;
 }
 
