@@ -187,3 +187,22 @@ progress[value]::-webkit-progress-value {
   margin: 0 auto;
   text-align: center;
 }
+
+/*------------ pagination --------------------------*/
+.pagination {
+  text-align: center;
+}
+
+.page {
+  background-color: #fff;
+  color: ;
+}
+
+.page a:hover {
+  color: #fff;
+}
+
+.current {
+  background-color: #008CBA;
+  color: #fff;
+}
