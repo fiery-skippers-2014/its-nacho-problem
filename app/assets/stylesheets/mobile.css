@@ -50,8 +50,28 @@ html #log-in {
   width: auto;
 }
 
+.recipes {
+  max-width: 250px;
+}
 
+.foodpic {
+  max-width: 200px;
+  height: 50%;
+}
 
+.results {
+  margin: 0 auto;
+}
+
+progress {
+  max-width: 200px;
+}
+
+.pagination {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 
 
