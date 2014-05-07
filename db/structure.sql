@@ -299,6 +299,7 @@ ALTER TABLE ONLY user_ingredients ALTER COLUMN id SET DEFAULT nextval('user_ingr
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+<<<<<<< HEAD
 
 
 --
@@ -307,6 +308,8 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 
 ALTER TABLE ONLY favorite_recipes
     ADD CONSTRAINT favorite_recipes_pkey PRIMARY KEY (id);
+=======
+>>>>>>> 471ec38822d7929d3fb137a597589c2e290e19de
 
 
 --
@@ -378,6 +381,7 @@ INSERT INTO schema_migrations (version) VALUES ('20140505050234');
 
 INSERT INTO schema_migrations (version) VALUES ('20140506011828');
 
+<<<<<<< HEAD
 INSERT INTO schema_migrations (version) VALUES ('20140506035501');
 
 INSERT INTO schema_migrations (version) VALUES ('20140506175451');
@@ -387,3 +391,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140506182449');
 INSERT INTO schema_migrations (version) VALUES ('20140506221702');
 
 INSERT INTO schema_migrations (version) VALUES ('20140507012755');
+=======
+INSERT INTO schema_migrations (version) VALUES ('20140506221702');
+>>>>>>> 471ec38822d7929d3fb137a597589c2e290e19de
