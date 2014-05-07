@@ -1,5 +1,5 @@
 <h3>Search results:</h3>
-<%= form_for @user, :remote => true do |f|  %>
+<%= form_for current_user, :remote => true do |f|  %>
 <div class="search-results"> 
   <% @ingredients.each do |item| %>
   <%= check_box_tag 'ingredient_ids[]', item.id %> <%= item.name %><br>
