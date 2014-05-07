@@ -14,7 +14,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-    # p params
     api_result = yummly_search_result(params[:ingredient], {maxResult: params[:max_result]}) #=> hard coded, change ingredient and number of recipes
     api_result.length.times do
       Recipe.create(new_recipe_from_yummly(api_result))

@@ -1,15 +1,12 @@
 class UsersController < ApplicationController
-
   def index
     if logged_in?
       redirect_to user_ingredients_path(current_user)
     end
   end
-
   def new
     @user = User.new
   end
-
   def create
     if params[:password] == params[:password_confirmation]
       user = User.new params[:user]
@@ -27,7 +24,6 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
   end
-
   def update
       if current_user.save
         params[:ingredient_ids].length.times do |index|
@@ -36,19 +32,15 @@ class UsersController < ApplicationController
       end
       render :partial => "ingredients/user_pantry"
   end
-
   def show
     @user_favorites = current_user.recipes.page(params[:page]).per(9)
   end
-
   def favorite_recipe
     current_user.recipes << Recipe.find(params[:recipe_id])
     redirect_to user_path(current_user)
   end
-
   def destroy
     current_user.ingredients.destroy(params[:id])
     render :partial => "ingredients/user_pantry"
   end
-
 end
