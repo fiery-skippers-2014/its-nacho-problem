@@ -2,15 +2,15 @@
 <h3><%= current_user.username.titleize %>'s Favorite Recipes:</h3>
 <hr>
 <div class="favorites-page">
-	<div class="row small-6 large-centered columns clearfix">
+	<div class="row">
+		<div class="small-12 large-6 large-centered columns clearfix">
 		<%= link_to "Your Pantry", user_ingredients_path(current_user), :class => "button radius left" %>
 		<%= link_to "All Recipes", user_nachoresult_path(current_user), :class => "button radius right" %>
+		</div>
 	</div>
-
-	<div class="results" id="favorite_recipe_list">
-		<div class="row">
+	<div class="row">
+		<div class="results" id="favorite_recipe_list">
 			<%= render partial: 'favorites' %>
 		</div>
-	<%= paginate @user_favorites %>
 	</div>
-</div>
+	<%= paginate @user_favorites %>
