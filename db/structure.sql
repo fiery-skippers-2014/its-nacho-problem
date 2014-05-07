@@ -69,36 +69,6 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: favorite_recipes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE favorite_recipes (
-    id integer NOT NULL,
-    user_id integer,
-    recipe_id integer
-);
-
-
---
--- Name: favorite_recipes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE favorite_recipes_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: favorite_recipes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE favorite_recipes_id_seq OWNED BY favorite_recipes.id;
-
-
---
 -- Name: ingredients; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -160,36 +130,6 @@ ALTER SEQUENCE recipes_id_seq OWNED BY recipes.id;
 
 
 --
--- Name: recipes_users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE recipes_users (
-    id integer NOT NULL,
-    recipe_id integer,
-    user_id integer
-);
-
-
---
--- Name: recipes_users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE recipes_users_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: recipes_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE recipes_users_id_seq OWNED BY recipes_users.id;
-
-
---
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -229,6 +169,36 @@ ALTER SEQUENCE user_ingredients_id_seq OWNED BY user_ingredients.id;
 
 
 --
+-- Name: user_recipes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE user_recipes (
+    id integer NOT NULL,
+    recipe_id integer,
+    user_id integer
+);
+
+
+--
+-- Name: user_recipes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE user_recipes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: user_recipes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE user_recipes_id_seq OWNED BY user_recipes.id;
+
+
+--
 -- Name: users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -263,13 +233,6 @@ ALTER SEQUENCE users_id_seq OWNED BY users.id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY favorite_recipes ALTER COLUMN id SET DEFAULT nextval('favorite_recipes_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY ingredients ALTER COLUMN id SET DEFAULT nextval('ingredients_id_seq'::regclass);
 
 
@@ -284,13 +247,6 @@ ALTER TABLE ONLY recipes ALTER COLUMN id SET DEFAULT nextval('recipes_id_seq'::r
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY recipes_users ALTER COLUMN id SET DEFAULT nextval('recipes_users_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY user_ingredients ALTER COLUMN id SET DEFAULT nextval('user_ingredients_id_seq'::regclass);
 
 
@@ -298,18 +254,14 @@ ALTER TABLE ONLY user_ingredients ALTER COLUMN id SET DEFAULT nextval('user_ingr
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY user_recipes ALTER COLUMN id SET DEFAULT nextval('user_recipes_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
-<<<<<<< HEAD
-
-
---
--- Name: favorite_recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY favorite_recipes
-    ADD CONSTRAINT favorite_recipes_pkey PRIMARY KEY (id);
-=======
->>>>>>> 471ec38822d7929d3fb137a597589c2e290e19de
 
 
 --
@@ -329,19 +281,19 @@ ALTER TABLE ONLY recipes
 
 
 --
--- Name: recipes_users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY recipes_users
-    ADD CONSTRAINT recipes_users_pkey PRIMARY KEY (id);
-
-
---
 -- Name: user_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY user_ingredients
     ADD CONSTRAINT user_ingredients_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: user_recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY user_recipes
+    ADD CONSTRAINT user_recipes_pkey PRIMARY KEY (id);
 
 
 --
@@ -381,16 +333,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140505050234');
 
 INSERT INTO schema_migrations (version) VALUES ('20140506011828');
 
-<<<<<<< HEAD
-INSERT INTO schema_migrations (version) VALUES ('20140506035501');
-
-INSERT INTO schema_migrations (version) VALUES ('20140506175451');
-
-INSERT INTO schema_migrations (version) VALUES ('20140506182449');
-
 INSERT INTO schema_migrations (version) VALUES ('20140506221702');
 
 INSERT INTO schema_migrations (version) VALUES ('20140507012755');
-=======
-INSERT INTO schema_migrations (version) VALUES ('20140506221702');
->>>>>>> 471ec38822d7929d3fb137a597589c2e290e19de

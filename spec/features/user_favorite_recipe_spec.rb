@@ -6,7 +6,6 @@ feature "user can favorite a recipe" do
 
   before(:each) do
     page.set_rack_session(:user_id => user.id)
-    user.recipes << recipe
     visit user_nachoresult_path(user)
   end
 
@@ -18,5 +17,6 @@ feature "user can favorite a recipe" do
   scenario "a user can click on Add to favorites and add the recipe to their favorite list on their user profile page" do
     click_on 'Add to favorites'
     expect(page).to have_content('Favorite Recipes')
+    expect(page).to have_content(recipe.name)
   end
 end
