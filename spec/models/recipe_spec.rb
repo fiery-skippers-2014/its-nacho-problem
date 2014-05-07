@@ -10,7 +10,8 @@ describe Recipe do
   it {should validate_uniqueness_of(:recipe_url)}
 
   context "Associations" do
-    it {should have_and_belong_to_many(:users)}
+    it {should have_many(:users)}
+    it {should have_many(:users).through(:user_recipes)}
   end
 
   context "method new_recipe_from_yummly" do
