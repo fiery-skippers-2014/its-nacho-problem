@@ -4,6 +4,8 @@ class Recipe < ActiveRecord::Base
 
   validates_presence_of :name, :recipe_url, :components
   validates_uniqueness_of :name, :recipe_url
+
+  has_and_belongs_to_many :users
 end
 
   def new_recipe_from_yummly(api_result)
@@ -17,7 +19,7 @@ end
       recipe_url = "http://www.yummly.com/recipe/#{recipe['id']}"
       recipe_img_url = recipe["smallImageUrls"][0]
       recipe_components = recipe['ingredients']
-    end 
+    end
     api_params = {name: recipe_name, recipe_url: recipe_url, img_url: recipe_img_url, components: recipe_components}
   end
 

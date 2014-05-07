@@ -1,4 +1,4 @@
-<h3 class="user_pantry"><%= current_user.username.titleize %>'s Pantry:</h3>
+ <h3 class="user_pantry"><%= current_user.username.titleize %>'s Pantry:</h3>
 
 <!-- Search bar -->
 <div class="user_pantry_div">
@@ -8,20 +8,20 @@
       <div class="clearfix">
         <%= render partial: 'ingredients/search' %>
         <%= render partial: 'ingredients/nacho' %>
+        <%= link_to "Your Favorites", favorite_recipe_users_path(current_user) ,:class => "button radius"%>
       </div>
     </div>
   </div>
 </div>
 
 <%= render partial: 'ingredients/notices' unless flash.nil? %>
-  
+
 <div class="row">
   <div class="large-6 columns pantry-container">
     <%= render partial: 'user_pantry' %>
   </div>
-
   <div class="large-6 columns search-result-container">
   </div>
-</div> 
+</div>
 
 

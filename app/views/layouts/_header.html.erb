@@ -1,10 +1,10 @@
 <nav class="top-bar" data-topbar>
   <section class="top-bar-section">
-    <% if !current_user %>
-      <%= link_to "Sign Up", "#", :id => "sign-up-link", :class => "right button radius" %>
-      <%= link_to "Log In", "#", :id => "login-link", :class => "right button radius" %>
+    <% if current_user.blank? %>
+      <%= link_to "Sign Up!", "#", :id => "sign-up-link", :class => "right button radius" %>
+      <%= link_to "Log In!", "#", :id => "login-link", :class => "right button radius" %>
     <% else %>
-      <p class="right button radius"><%= current_user.username %></p>
+      <%= link_to "Favorites", favorite_recipe_users_path,:class => "right button radius"%>
       <%= link_to "Log out", logout_path, :class => "right button radius" %>
     <% end %>
   </section>
