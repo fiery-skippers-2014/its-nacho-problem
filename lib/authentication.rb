@@ -11,6 +11,10 @@ module Authentication
     session[:user_id] = user.id
   end
 
+  def is_admin?
+    current_user.email == "admin@admin.com"
+  end
+
   def logged_in?
     current_user.present?
   end
