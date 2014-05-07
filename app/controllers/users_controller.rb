@@ -31,6 +31,8 @@ class UsersController < ApplicationController
         params[:ingredient_ids].length.times do |index|
           current_user.ingredients << Ingredient.find(params[:ingredient_ids][index])
         end
+      else
+        flash[:error] = "Ingredient could not be added to your pantry"
       end
       render :partial => "ingredients/user_pantry"
   end
