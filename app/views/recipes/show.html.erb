@@ -7,8 +7,8 @@
       <ol class="large-block-grid-3 results">
       <% @paginatable_array.each_with_index do |recipe| %>
       <li>
-        <ul id="recipes">
-          <li><%= image_tag recipe[1].img_url %></li>
+        <ul class="recipes">
+          <li><%= image_tag recipe[1].img_url, :class => "foodpic"%></li>
           <h6><li><%= recipe[1].name %></li></h6>
           <progress max="100" value ="<%= recipe[0] %>"></progress>
           <li><%= recipe[0] %>% Nacho Problem</li>
@@ -19,10 +19,10 @@
             <br/>
             <li class='ingredient-bold'>Missing Ingredients:</li>
             <li><%= @top_recipes["#{recipe[1].name}"].join(', ') %></li>
-            <li><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
+            <li class="text-center"><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
             <%= form_for current_user, :url => favorite_recipe_users_path, :method => "post" do |f| %>
               <%= hidden_field_tag("recipe_id", recipe[1].id) %>
-              <%= f.submit :value=> "Add to favorites", :class => "button radius"%>
+              <%= f.submit :value=> "Add to favorites", :class => "button expand tiny round"%>
             <% end %>
           <div>
         </ul>

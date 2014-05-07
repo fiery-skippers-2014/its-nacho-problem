@@ -1,7 +1,8 @@
 ItsNachoProblem::Application.routes.draw do
 
   get '/logout' => 'sessions#destroy', :as => 'logout'
-  root to: 'users#index'
+
+  resources :admins, only: [:index, :create]
 
   resources :recipes, only: [:create, :show]
 
@@ -18,4 +19,5 @@ ItsNachoProblem::Application.routes.draw do
     end
     get '/nachoresult' => 'recipes#show', as: 'nachoresult'
   end
+  root to: 'users#index'
 end

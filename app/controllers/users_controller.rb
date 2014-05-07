@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       user.password = params[:password]
       if user.save
         session[:user_id] = user.id
+        is_admin?
         redirect_to user_ingredients_path(user)
       else
         flash[:error] = user.errors.full_messages.join(' : ')
@@ -37,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_favorites = current_user.recipes
+    @user_favorites = current_user.recipes.page(params[:page]).per(9)
   end
 
   def favorite_recipe
