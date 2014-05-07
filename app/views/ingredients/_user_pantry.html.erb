@@ -2,8 +2,7 @@
 <div class="search-results">
   <ul>
     <% current_user.ingredients.each do |ingredient| %>
-    	<li><%= ingredient.name %> <%= button_to "x", {controller: :users, action: :destroy, id: ingredient.id,}, method: :delete, :remote => true %>
-      </li>
+    	<li><%= ingredient.name %> <%= button_to "x", {controller: :users, action: :destroy, id: ingredient.id,}, method: :delete, :remote => true %></li>
     <% end %>
   </ul>
 </div>

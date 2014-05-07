@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
 
-
   def yummly_search_result(user_pantry, max_results)
     result = Yummly.search(user_pantry, max_results)
     result.matches
@@ -25,7 +24,5 @@ class RecipesController < ApplicationController
     # @top_recipes = current_user.sort_recipes_by_ingredients
     # redirect_to user_
     render nothing: true #REMEMBER TO TAKE THIS OUT; ONLY FOR TEST PURPOSES
-
   end
-
 end

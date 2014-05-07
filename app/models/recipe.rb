@@ -22,5 +22,3 @@ end
     end
     api_params = {name: recipe_name, recipe_url: recipe_url, img_url: recipe_img_url, components: recipe_components}
   end
-
-
