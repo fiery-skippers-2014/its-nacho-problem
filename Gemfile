@@ -12,6 +12,7 @@ gem 'dotenv'
 gem 'yummly'
 gem 'pg_search'
 gem 'rails3-jquery-autocomplete'
+gem 'kaminari'
 
 gem 'pg'
 group :development, :test do
