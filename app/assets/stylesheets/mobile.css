@@ -1,6 +1,6 @@
 @media only screen and (max-width: 40em) { 
 
-#bg {
+body {
   background: url("mobile-color.png") !important;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -26,10 +26,48 @@
   background-size: cover !important;
 }
 
-/*.results {
-  padding-left: 0;
-}*/
+.login-signup-container {
+  margin-top: 0;
+}
 
+html #sign-up {
+  margin-top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+html #log-in {
+  margin-top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.favorites {
+  width: auto;
+}
+
+.recipes {
+  max-width: 250px;
+}
+
+.foodpic {
+  max-width: 200px;
+  height: 50%;
+}
+
+.results {
+  margin: 0 auto;
+}
+
+progress {
+  max-width: 200px;
+}
+
+.pagination {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 
 
