@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   def index
+  end
+  def new
+    @user = User.new
     if logged_in?
       redirect_to user_ingredients_path(current_user)
     end
   end
-  def new
-    @user = User.new
-  end
   def create
+    # If I remove the 'password == password_confirmation' line, it allows users to sign up with invalid info/unmatched passwords! See user_sign_up_spec.rb
     if params[:password] == params[:password_confirmation]
       user = User.new params[:user]
       user.password = params[:password]

@@ -1,5 +1,4 @@
-
-
+ <!-- Do not move into a partial! Both forms toggle! -->
  <div class="login-signup-container">
     <% flash.each do |name, msg| -%>
         <%= content_tag :div, msg, class: name %>
@@ -19,7 +18,6 @@
         <%= f.submit 'Sign Up', :class => "button radius" %>
       <% end %>
     </div>
-
     <div id="log-in" class="small-12 large-centered columns ">
       <h3>Log In:</h3>
       <%= form_tag '/sessions' %>
