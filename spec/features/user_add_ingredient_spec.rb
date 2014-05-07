@@ -9,19 +9,11 @@ feature "adding ingredient into pantry" do
     visit user_ingredients_path(user)
   end
 
-  scenario "a user can add click on a checkbox for the ingreident" do
+  scenario "a user can add click on a checkbox for the ingredient" do
   	 fill_in 'search', with: 'apple'
      click_on 'Search'
      find(:css, "input#ingredient_ids_").set(true)
      click_on "Add to pantry"
      expect(page).to have_content('apple')
-  end
-
-  scenario "a user can not add the same ingredient to their pantry" do
-    fill_in 'search', with: 'apple'
-    click_on 'Search'
-    find(:css, "input#ingredient_ids_").set(true)
-    click_on "Add to pantry"
-    expect(page).to have_content('error')
   end
 end
