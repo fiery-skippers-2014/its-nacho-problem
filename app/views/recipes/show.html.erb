@@ -11,10 +11,10 @@
               <li><%= recipe[0] %>% Nacho Problem</li>
               <%= link_to "See more", "#", {:class => "see_more"} %>
               <div class='toggle hidden'>
-                <li class='ingredient-bold'>Recipe Needs:</li>
+                <li class='ingredient-bold'><b>Recipe Needs:</b></li>
                 <li><%= recipe[1].components.join(', ')%></li>
                 <br/>
-                <li class='ingredient-bold'>Missing Ingredients:</li>
+                <li class='ingredient-bold'><b>Missing Ingredients:</b></li>
                 <li><%= @top_recipes["#{recipe[1].name}"].join(', ') %></li>
                 <li class="text-center"><%= link_to "See Recipe", "#{recipe[1].recipe_url}" %></li>
                 <%= form_for current_user, :url => favorite_recipe_users_path, :method => "post" do |f| %>

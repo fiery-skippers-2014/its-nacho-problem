@@ -14,5 +14,3 @@ UserIntro = {
     $('#log-in').slideToggle()
   }
 }
-
-
