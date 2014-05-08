@@ -1,0 +1,17 @@
+<ul class="small-block-grid-1 large-block-grid-3">
+  <% @user_favorites.each do |favorite| %>
+  <li>
+    <ul class="favorites">
+      <li><%= image_tag favorite.img_url, :class => "foodpic" %></li>
+      <h6><li><%= favorite.name %></li></h6>
+      <%= link_to "See more", "#", {:class => "see_more"} %>
+      <div class='toggle hidden'>
+          <li class='ingredient-bold'>Recipe Needs:</li>
+          <li><%= favorite.components.join(', ')%></li>
+          <br/>
+          <li class="text-center"><%= link_to "See Recipe", "#{favorite.recipe_url}" %></li>
+      </div>
+    </ul>
+  </li>
+  <% end %>
+</ul>

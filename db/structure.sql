@@ -106,7 +106,8 @@ CREATE TABLE recipes (
     name character varying(255),
     recipe_url character varying(255),
     components text,
-    img_url character varying(255) DEFAULT 'http://i.imgur.com/YwmTBuJ.png'::character varying
+    img_url character varying(255) DEFAULT 'http://i.imgur.com/YwmTBuJ.png'::character varying,
+    user_id integer
 );
 
 
@@ -127,6 +128,36 @@ CREATE SEQUENCE recipes_id_seq
 --
 
 ALTER SEQUENCE recipes_id_seq OWNED BY recipes.id;
+
+
+--
+-- Name: recipes_users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE recipes_users (
+    id integer NOT NULL,
+    recipe_id integer,
+    user_id integer
+);
+
+
+--
+-- Name: recipes_users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE recipes_users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: recipes_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE recipes_users_id_seq OWNED BY recipes_users.id;
 
 
 --
@@ -174,8 +205,8 @@ ALTER SEQUENCE user_ingredients_id_seq OWNED BY user_ingredients.id;
 
 CREATE TABLE user_recipes (
     id integer NOT NULL,
-    recipe_id integer,
-    user_id integer
+    user_id integer,
+    recipe_id integer
 );
 
 
@@ -247,6 +278,13 @@ ALTER TABLE ONLY recipes ALTER COLUMN id SET DEFAULT nextval('recipes_id_seq'::r
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY recipes_users ALTER COLUMN id SET DEFAULT nextval('recipes_users_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY user_ingredients ALTER COLUMN id SET DEFAULT nextval('user_ingredients_id_seq'::regclass);
 
 
@@ -278,6 +316,14 @@ ALTER TABLE ONLY ingredients
 
 ALTER TABLE ONLY recipes
     ADD CONSTRAINT recipes_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: recipes_users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY recipes_users
+    ADD CONSTRAINT recipes_users_pkey PRIMARY KEY (id);
 
 
 --
@@ -332,6 +378,10 @@ INSERT INTO schema_migrations (version) VALUES ('20140503203317');
 INSERT INTO schema_migrations (version) VALUES ('20140505050234');
 
 INSERT INTO schema_migrations (version) VALUES ('20140506011828');
+
+INSERT INTO schema_migrations (version) VALUES ('20140506035501');
+
+INSERT INTO schema_migrations (version) VALUES ('20140506175758');
 
 INSERT INTO schema_migrations (version) VALUES ('20140506221702');
 

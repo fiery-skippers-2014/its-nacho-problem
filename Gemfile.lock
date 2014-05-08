@@ -73,7 +73,7 @@ GEM
     ffi (1.9.3)
     hike (1.2.3)
     i18n (0.6.1)
-    jasmine (2.0.0)
+    jasmine (2.0.1)
       jasmine-core (~> 2.0.0)
       phantomjs
       rack (>= 1.2.1)

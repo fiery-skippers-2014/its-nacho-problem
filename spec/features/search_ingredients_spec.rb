@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'searching for ingredient in serach bar' do
+feature 'searching for ingredient in search bar' do
   let!(:ingredient) {Ingredient.create(name: 'apple')}
   let!(:user) {FactoryGirl.create :user}
 
@@ -8,7 +8,6 @@ feature 'searching for ingredient in serach bar' do
     page.set_rack_session(:user_id => user.id)
     visit user_ingredients_path(user)
   end
-
 
   scenario "a user can search for existing ingredients" do
     fill_in 'search', with: 'apple'

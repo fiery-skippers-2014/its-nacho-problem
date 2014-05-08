@@ -1,16 +1,14 @@
 class UsersController < ApplicationController
 
-  def index
+  def new
+    @user = User.new
     if logged_in?
       redirect_to user_ingredients_path(current_user)
     end
   end
 
-  def new
-    @user = User.new
-  end
-
   def create
+    # If I remove the 'password == password_confirmation' line, it allows users to sign up with invalid info/unmatched passwords!
     if params[:password] == params[:password_confirmation]
       user = User.new params[:user]
       user.password = params[:password]
@@ -33,6 +31,8 @@ class UsersController < ApplicationController
         params[:ingredient_ids].length.times do |index|
           current_user.ingredients << Ingredient.find(params[:ingredient_ids][index])
         end
+      else
+        flash[:error] = "Ingredient could not be added to your pantry"
       end
       render :partial => "ingredients/user_pantry"
   end
@@ -50,5 +50,4 @@ class UsersController < ApplicationController
     current_user.ingredients.destroy(params[:id])
     render :partial => "ingredients/user_pantry"
   end
-
 end

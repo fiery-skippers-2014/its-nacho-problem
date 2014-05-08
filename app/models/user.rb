@@ -1,9 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation
-
   validates_presence_of :password, :email, :on => :create
   validates :email, :uniqueness => true
-
   has_many :user_ingredients
   has_many :ingredients, through: :user_ingredients
 
@@ -36,7 +34,6 @@ class User < ActiveRecord::Base
     Hash[top_recipes.slice(0, number_of_recipes)]
   end
 
-
   def find_top_recipes_in_db(top_recipes_hash)
     recipe_objects = []
     top_recipes_hash.each_key {|recipe_name| recipe_objects << Recipe.find_by_name(recipe_name)}
@@ -54,8 +51,3 @@ class User < ActiveRecord::Base
     by_percent.sort_by { |recipe| recipe[0]}.reverse!
   end
 end
-
-
-
-
-
