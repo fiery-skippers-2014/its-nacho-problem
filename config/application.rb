@@ -1,4 +1,4 @@
-\require File.expand_path('../boot', __FILE__)
+require File.expand_path('../boot', __FILE__)
 require 'bcrypt'
 
 # Pick the frameworks you want:
@@ -30,7 +30,7 @@ module ItsNachoProblem
     config.assets.enabled = true
 
     config.assets.version = '1.0'
-    
+
     config.assets.initialize_on_precompile = false
   end
 end
