@@ -12,4 +12,14 @@ feature "User Sign in" do
     end
     expect(page).to have_content(user.username)
   end
+
+  scenario "a user can't log in with invalid params" do 
+    visit root_path
+    within 'div#log-in' do 
+      fill_in 'Email',        :with => "dog"
+      fill_in 'Password',      :with => "password"
+      click_on 'Log In'
+    end
+    expect(page).not_to have_content(user.username)
+  end
 end

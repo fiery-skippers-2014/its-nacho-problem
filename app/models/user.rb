@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   private
 
   def find_recipe_by_pantry(recipe_data)
-    pantry_hashed = get_keyword
+    pantry_hashed = assign_ingredient_to_keyword
     found_recipes = {}
     recipe_data.map do |recipe_obj|
       found_recipes[recipe_obj.name] = recipe_obj.components.reject {|recipe| pantry_hashed[recipe[0..4]] }
@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
     found_recipes
   end
 
-  def get_keyword
+  def assign_ingredient_to_keyword
     get_user_ingredient_names.inject({}) {|hash, element| hash[element[0..[4, element.size].min]] = element; hash}
   end
 
