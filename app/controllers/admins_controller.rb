@@ -6,7 +6,6 @@ class AdminsController < ApplicationController
   end
 
   def index
-    @recipe = Recipe.new
   end
 
   def create

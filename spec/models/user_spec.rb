@@ -16,40 +16,47 @@ describe User do
   end
 
   context "Comparing pantry with database" do
-    let(:user){FactoryGirl.create(:user)}
-    let(:ingredient){FactoryGirl.create(:ingredient)}
-    let(:recipe){FactoryGirl.create(:recipe)}
-
-    before(:each) do
-      user.ingredients << ingredient
+    let!(:user){FactoryGirl.create(:user)}
+    before(:each) do 
+      @recipes = []
+      ingredients = []
+      4.times do 
+        @recipes << FactoryGirl.create(:recipe)
+        ingredients << FactoryGirl.create(:ingredient)
+      end
+      user.ingredients = ingredients
+      user.save
     end
+    
 
-    it "should return an array with #get_name" do
-      expect(user.get_name).to be_an Array
+    context "#sort_recipes_by_ingredients" do 
+
+      it "should return a hash with" do
+        expect(user.sort_recipes_by_ingredients(@recipes, 4)).to be_a Hash
+      end
+
+      it "should return 4 recipes" do 
+        expect(user.sort_recipes_by_ingredients(@recipes, 3).length).to eq(3)
+      end
+
+      it "should sort the hash of recipes by the least missing ingredients" do 
+        expect(user.sort_recipes_by_ingredients(@recipes,1)).to eq({@recipes[0].name => []})
+      end
+
     end
+    
+    context "#sort_recipes_by_percentage" do 
+      let(:top_recipes) {user.sort_recipes_by_ingredients(@recipes, 1)}
 
-    it "should return an hash with #get_keyword " do
-      expect(user.get_keyword).to be_a Hash
-    end
+      it "should return a hash with #sort_recipes_by_percentage(top_recipes_hash)" do
+        expect(user.sort_recipes_by_percentage(top_recipes)).to be_an Array
+      end
 
-    it "should return a hash with #find_recipe_by_pantry" do
-      expect(user.find_recipe_by_pantry).to be_a Hash
-    end
+      it "sorts the recipes by percentage of ingredients missing" do 
+        expect(user.sort_recipes_by_percentage(top_recipes)).to eq([[100,@recipes[0]]])
+      end
 
-    it "should return a hash with #sort_recipes_by_ingredients(number_of_recipes)" do
-      expect(user.sort_recipes_by_ingredients(1)).to be_a Hash
-    end
 
-    it "should return a hash with #find_top_recipes_in_db(top_recipes_hash)" do
-      expect(user.find_top_recipes_in_db({})).to be_an Array
-    end
-
-    it "should return a hash with #get_percentage_of_missing_ingredients(top_recipes_hash)" do
-      expect(user.get_percentage_of_missing_ingredients({})).to be_an Array
-    end
-
-    it "should return a hash with #sort_recipes_by_percentage(top_recipes_hash)" do
-      expect(user.sort_recipes_by_percentage({})).to be_an Array
     end
 
   end
