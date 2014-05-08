@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "removing ingredient from pantry" do
-  let!(:ingredient) {Ingredient.create(name: 'apple')}
+  let!(:ingredient) {FactoryGirl.create :ingredient}
   let!(:user) {FactoryGirl.create :user}
 
   before(:each) do
@@ -10,8 +10,8 @@ feature "removing ingredient from pantry" do
     visit user_ingredients_path(user)
   end
 
-  scenario "a user can add click on a checkbox for the ingreident" do
+  scenario "a user can delete an item from their pantry" do
     click_on "x"
-    expect(page).not_to have_content('apple')
+    expect(page).not_to have_content(ingredient)
   end
 end

@@ -1,5 +1,4 @@
 require 'spec_helper'
-include AuthenticationHelper
 
 describe UsersController do
   let(:user_atts) { FactoryGirl.attributes_for :user }

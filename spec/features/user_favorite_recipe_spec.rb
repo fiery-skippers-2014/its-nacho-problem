@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "user can favorite a recipe" do
   let!(:user) {FactoryGirl.create :user}
-  let!(:recipe) {Recipe.create(name: 'Apple Pie', recipe_url: 'http://www.yummly.com/recipes/gala-apples-pie', components: ['apple', 'pie'])}
+  let!(:recipe) {FactoryGirl.create :recipe}
 
   before(:each) do
     page.set_rack_session(:user_id => user.id)

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 feature 'searching for ingredient in serach bar' do
-  let!(:ingredient) {Ingredient.create(name: 'apple')}
+  let!(:ingredient) {FactoryGirl.create :ingredient}
   let!(:user) {FactoryGirl.create :user}
-  let!(:recipe) {Recipe.create(name: 'Apple Pie', recipe_url: 'www.applepie.com', components: ['apple', 'pie'])}
+  let!(:recipe) {FactoryGirl.create :recipe}
 
   before(:each) do
     page.set_rack_session(:user_id => user.id)
@@ -13,11 +13,11 @@ feature 'searching for ingredient in serach bar' do
 
   scenario "a user will be shown recipes sorted by ingredients that they have" do
     click_on 'Nacho Problem'
-    expect(page).to have_content('Apple Pie')
+    expect(page).to have_content(ingredient.name)
   end  
 
-  scenario "a user will be shown missing ingredients for each recipe" do
+  scenario "a user will be shown recipes ingredients" do
     click_on 'Nacho Problem'
-    expect(page).to have_content('Missing Ingredients: pie')
+    expect(page).to have_content(recipe.name)
   end
 end

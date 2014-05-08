@@ -5,9 +5,6 @@ class AdminsController < ApplicationController
     result.matches
   end
 
-  def index
-  end
-
   def create
     api_result = yummly_search_result(params["/admins"]["ingredient"], {maxResult: params["/admins"]["max_result"]}) #=> hard coded, change ingredient and number of recipes
     api_result.length.times do
