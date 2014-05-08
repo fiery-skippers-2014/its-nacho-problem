@@ -8,7 +8,7 @@ FactoryGirl.define do
   end
 
   factory :ingredient do 
-    name { Faker::Lorem.word }
+    sequence(:name) {|n| "ingredient#{n}" }
   end
 
   factory :user_ingredient do
@@ -17,11 +17,12 @@ FactoryGirl.define do
   end
 
   factory :recipe do 
-    name {Faker::Lorem.word}
+    sequence(:name) {|n| "name#{n}"}
     recipe_url {Faker::Internet.url}
-    components {[Faker::Lorem.word, Faker::Lorem.word, Faker::Lorem.word, Faker::Lorem.word]}
+    sequence(:components) {|n|["ingredient#{n}","ingredient#{n+1}","ingredient#{n+2}","ingredient#{n+3}" ]}
     img_url {Faker::Internet.url}
   end
   
+
 
 end
