@@ -1,9 +1,5 @@
-
-
- <div class="login-signup-container">
-    <% flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, class: name %>
-    <% end %>
+<div class="login-signup-container">
+  <%= render partial: 'ingredients/notices' unless flash.nil? %>
   <div class="row">
     <div id="sign-up" class="small-12 large-12 large-centered columns sign-up-form">
       <h3>Sign Up:</h3>

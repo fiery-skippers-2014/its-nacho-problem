@@ -13,7 +13,6 @@ body {
   margin-left: 0;
 }
 
-
 .user_pantry_div {
   margin-top: 0;
 }
@@ -43,7 +42,7 @@ html #log-in {
 }
 
 .favorites {
-  width: auto;
+  max-width: 250px;
 }
 
 .recipes {
@@ -62,17 +61,5 @@ html #log-in {
 progress {
   max-width: 200px;
 }
-
-.pagination {
-  width: 250px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-
-
-
-
 
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
