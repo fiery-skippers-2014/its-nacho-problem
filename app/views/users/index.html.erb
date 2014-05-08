@@ -5,7 +5,7 @@
         <%= content_tag :div, msg, class: name %>
     <% end %>
   <div class="row">
-    <div id="sign-up" class="small-12 large-centered columns sign-up-form">
+    <div id="sign-up" class="small-12 large-12 large-centered columns sign-up-form">
       <h3>Sign Up:</h3>
       <%= form_for :user, url: users_path do |f| %>
         <%= f.label :username %>
@@ -20,7 +20,7 @@
       <% end %>
     </div>
 
-    <div id="log-in" class="small-12 large-centered columns ">
+    <div id="log-in" class="small-12 large-12 large-centered columns ">
       <h3>Log In:</h3>
       <%= form_tag '/sessions' %>
       <%= label_tag :email %>
